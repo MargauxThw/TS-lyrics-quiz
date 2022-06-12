@@ -231,8 +231,8 @@ export default new Vuex.Store({
         case 1: // Freeplay modes
           this.commit("GET_RANDOM_LINE");
           break;
-        case 2: // Chorus mode
-          this.commit("GET_LINE_FROM", "Chorus");
+        case 2: // Chorus mode ([ to dstinguish from Pre-Chorus)
+          this.commit("GET_LINE_FROM", "[Chorus");
           break;
         case 3: // Verse mode
           this.commit("GET_LINE_FROM", "Verse");
