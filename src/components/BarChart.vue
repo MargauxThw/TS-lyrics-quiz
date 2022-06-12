@@ -38,16 +38,6 @@ ChartJS.register(
   LinearScale
 );
 
-const CHART_COLORS = {
-  red: "rgb(255, 99, 132)",
-  orange: "rgb(255, 159, 64)",
-  yellow: "rgb(255, 205, 86)",
-  green: "rgb(75, 192, 192)",
-  blue: "rgb(54, 162, 235)",
-  purple: "rgb(153, 102, 255)",
-  grey: "rgb(201, 203, 207)",
-};
-
 export default {
   name: "BarChart",
   components: { Bar },
@@ -104,21 +94,8 @@ export default {
         datasets: [
           {
             data: store.getters.getSimilarities,
-            backgroundColor: [
-              CHART_COLORS.red,
-              CHART_COLORS.red,
-              CHART_COLORS.orange,
-              CHART_COLORS.yellow,
-              CHART_COLORS.green,
-              CHART_COLORS.blue,
-              CHART_COLORS.purple,
-              CHART_COLORS.grey,
-              "green",
-              "red",
-              "red",
-              "green",
-              "green",
-            ],
+            backgroundColor: store.getters.getChartCols.insides,
+            borderColor: store.getters.getChartCols.outlines,
           },
         ],
       },
@@ -126,15 +103,27 @@ export default {
         responsive: true,
         maintainAspectRatio: false,
         indexAxis: "y",
+        elements: {
+          bar: {
+            borderWidth: 2,
+            borderColor: store.getters.getChartCols.outlines,
+          },
+        },
         plugins: {
           legend: {
             display: false,
           },
           tooltip: {
+            intersect: false,
+
             callbacks: {
               label: function (context) {
-                return context.parsed.x + "%";
+                console.log(context);
+                return ` Album: ${store.getters.getAlbumName(
+                  store.getters.getAlbums[context.dataIndex]
+                )} | Accuracy: ${context.parsed.x}%`;
               },
+              formattedValue: "Hello",
             },
           },
         },

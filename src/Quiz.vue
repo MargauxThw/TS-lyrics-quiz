@@ -81,8 +81,14 @@ export default {
       this.checking = true;
       var similarity = this.similarity(this.input, this.curr_line.line.this);
       var song = `${this.curr_line.song} ${this.curr_line.line.section}`;
+      var album = this.curr_line.album_num;
+      console.log(this.curr_line);
       console.log("INITIAL", song);
-      store.commit("UPDATE_SIMILARITY", { curr_sim: similarity, song: song });
+      store.commit("UPDATE_SIMILARITY", {
+        curr_sim: similarity,
+        song: song,
+        album: album,
+      });
     },
     nextPress() {
       this.checking = false;

@@ -35,8 +35,9 @@ export default new Vuex.Store({
     ],
     current_line: {},
     input: "",
-    similarities: [20],
-    songs: ["test 1"], // 'Cardigan [Verse]'
+    similarities: [],
+    songs: [], // 'Cardigan [Verse]'
+    albums: [], // 0 => evermore
     mode: 0,
     q_num: 0,
     q_bound: 13,
@@ -66,7 +67,11 @@ export default new Vuex.Store({
     },
     getAlbum: (state) => (ind) => {
       const album_name = state.albumOrder[ind];
+      console.log(album_name, ind);
       return state.data[album_name];
+    },
+    getAlbumName: (state) => (ind) => {
+      return state.albumOrder[ind];
     },
     getAlbumCol: (state) => (ind) => {
       return state.albumCols[ind];
@@ -122,6 +127,45 @@ export default new Vuex.Store({
     getSongs: (state) => {
       console.log(state.songs);
       return state.songs;
+    },
+    getAlbums: (state) => {
+      console.log(state.albums);
+      return state.albums;
+    },
+    getChartCols: (state) => {
+      const outlines = [
+        "rgb(254, 140, 0)",
+        "rgb(135, 135, 135)",
+        "rgb(255, 168, 255)",
+        "rgb(79, 124, 81)",
+        "rgb(142, 186, 251)",
+        "rgb(174, 30, 73)",
+        "rgb(152, 99, 220)",
+        "rgb(255, 186, 82)",
+        "rgb(58, 166, 237)",
+        "rgb(0, 0, 0)",
+      ];
+      const insides = [
+        "rgba(254, 140, 0, 0.5)",
+        "rgba(135, 135, 135, 0.5)",
+        "rgba(255, 168, 255, 0.5)",
+        "rgba(79, 124, 81, 0.5)",
+        "rgba(142, 186, 251, 0.5)",
+        "rgba(174, 30, 73, 0.5)",
+        "rgba(152, 99, 220, 0.5)",
+        "rgba(255, 186, 82, 0.5)",
+        "rgba(58, 166, 237, 0.5)",
+        "rgba(0, 0, 0, 0.5)",
+      ];
+      var ordered_insides = [];
+      var ordered_outlines = [];
+
+      for (var i = 0; i < state.albums.length; i++) {
+        ordered_insides.push(insides[state.albums[i]]);
+        ordered_outlines.push(outlines[state.albums[i]]);
+      }
+
+      return { outlines: ordered_outlines, insides: ordered_insides };
     },
   },
   mutations: {
@@ -209,6 +253,7 @@ export default new Vuex.Store({
       state.similarities.push(data.curr_sim);
       console.log("before", data.song);
       state.songs.push(data.song);
+      state.albums.push(data.album);
     },
     PLAY_GAME(state, mode) {
       state.mode = mode;
