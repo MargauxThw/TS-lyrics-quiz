@@ -23,7 +23,8 @@
     <button v-if="checking" @click="nextPress">NEXT LYRICS</button>
   </div>
   <div id="quiz" v-else>
-    <h2>Congratulations! You just finished {{ title }}</h2>
+    <h3>Congratulations! You just finished:</h3>
+    <h2>{{ title }}</h2>
     <!-- Maybe have a graph below? With best album and worst album or something too? -->
     <h3>
       You had an average of {{ avgSim }}% with {{ numCorrect }} line(s) 100%
