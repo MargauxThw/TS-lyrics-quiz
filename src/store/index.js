@@ -327,6 +327,7 @@ export default new Vuex.Store({
     RESET_GAME(state) {
       state.similarities = [];
       state.songs = [];
+      state.albums = [];
       state.current_line = {};
       state.input = "";
       state.mode = 0;
