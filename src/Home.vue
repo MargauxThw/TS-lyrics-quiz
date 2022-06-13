@@ -103,7 +103,6 @@ body {
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .button-menu {
-  // border-top: 2px solid lightgrey;
   border-width: 2px;
   border-style: solid;
   border-image: linear-gradient(

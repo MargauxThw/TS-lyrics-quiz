@@ -40,7 +40,6 @@
   <div id="quiz" v-else>
     <h3>Congratulations! You just finished:</h3>
     <h2>{{ title }}</h2>
-    <!-- Maybe have a graph below? With best album and worst album or something too? -->
     <h3>
       You had an average of {{ avgSim }}% with {{ numCorrect }} line(s) 100%
       correct
@@ -85,7 +84,6 @@ export default {
     this.end = false;
     this.checking = false;
     store.commit("RESET_GAME");
-    console.log(this.$route.params);
     store.commit("PLAY_GAME", this.$route.params.mode);
   },
   computed: {
@@ -99,7 +97,6 @@ export default {
       q_bound: "getQBound",
       avgSim: "getAvgSim",
       numCorrect: "getNumCorrect",
-      fetched: "getFetched",
     }),
   },
   methods: {
@@ -108,8 +105,6 @@ export default {
       var similarity = this.similarity(this.input, this.curr_line.line.this);
       var song = `${this.curr_line.song} ${this.curr_line.line.section}`;
       var album = this.curr_line.album_num;
-      console.log(this.curr_line);
-      console.log("INITIAL", song);
       store.commit("UPDATE_SIMILARITY", {
         curr_sim: similarity,
         song: song,
@@ -125,7 +120,6 @@ export default {
         this.end = true;
       } else {
         store.commit("PLAY_GAME", this.$route.params.mode);
-        console.log(this.curr_line);
       }
     },
     editDistance(s1, s2) {
@@ -176,21 +170,6 @@ export default {
 </script>
 
 <style lang="scss">
-// #app {
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-//   margin-top: 50px;
-// }
-// body {
-//   max-width: 900px;
-//   margin: 0 auto;
-//   padding: 5% 5% 0% 5%;
-//   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-//     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-// }
 #scores {
   display: inline-flex;
   justify-content: space-between;
@@ -201,48 +180,17 @@ export default {
     margin-block: 0;
   }
 }
-// .button-menu {
-//   border-top: 2px solid black;
-//   padding: 20px 0;
-//   display: flex;
-//   flex-direction: column;
-//   gap: 8px;
-
-//   button {
-//     margin: 0px auto;
-//     max-width: 600px;
-//     width: 100%;
-//     padding: 12px;
-
-//     font-size: 1em;
-//     font-style: bold;
-//     color: white;
-//     background-color: black;
-//     border-radius: 8px;
-//     border: none;
-//     outline: none;
-//   }
-// }
 
 .checkButton,
 .nextButton {
-  // box-shadow: inset 0px 1px 0px 0px #ffffff;
-  // background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
-  // background-color: rgb(174, 30, 73) !important;
   border-radius: 6px;
-  // border: 1px solid #2c3e50;
   margin-top: -20px;
   border: none;
-  // display: inline-block;
   cursor: pointer;
-  // color: #2c3e50;
   color: white;
-  // font-family: Arial;
   font-size: 16px;
   font-weight: bold;
   padding: 10px 24px;
-  // text-decoration: none;
-  // text-shadow: 0px 1px 0px #ffffff;
   width: 100%;
   max-width: 600px;
   box-shadow: none !important;
@@ -258,31 +206,4 @@ export default {
   background: #2c3e50;
   color: white;
 }
-// .myButton {
-//   cursor: pointer;
-//   margin: 0px auto;
-//   max-width: 600px;
-//   width: 100%;
-//   padding: 12px;
-
-//   font-size: 1em;
-//   font-style: bold;
-//   color: black;
-//   border-color: black;
-//   background-color: #f9f9f9;
-//   border-radius: 8px;
-//   // border: none;
-//   outline: none;
-//   :focus {
-//     border: 1px solid black;
-//   }
-// }
-// .myButton:hover {
-//   background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
-//   background-color: #e9e9e9;
-// }
-// .myButton:active {
-//   position: relative;
-//   top: 1px;
-// }
 </style>

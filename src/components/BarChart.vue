@@ -63,7 +63,6 @@ export default {
     },
     height: {
       type: Number,
-      //   default: 300,
     },
     cssClasses: {
       default: "",
@@ -77,15 +76,6 @@ export default {
       type: Object,
       default: () => {},
     },
-  },
-  created() {
-    console.log(
-      this.sims,
-      this.songs,
-      store,
-      window.innerHeight,
-      window.innerWidth
-    );
   },
   data() {
     return {
@@ -118,7 +108,6 @@ export default {
 
             callbacks: {
               label: function (context) {
-                console.log(context);
                 return ` Album: ${store.getters.getAlbumName(
                   store.getters.getAlbums[context.dataIndex]
                 )} | Accuracy: ${context.parsed.x}%`;
@@ -150,16 +139,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// canvas#bar-chart {
-//   width: 20px !important;
-//   div {
-//     max-height: 20px !important;
-//   }
-// }
 #bar-chart {
-  //   width: 20px !important;
-  //   width: 1000px !important;
-  //   height: 600px !important;
   width: 90%;
   max-width: 500px;
 }

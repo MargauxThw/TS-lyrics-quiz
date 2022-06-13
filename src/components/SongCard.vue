@@ -4,7 +4,6 @@
       <ul class="results-top">
         <li class="album">
           {{ curr_line.album.toUpperCase() }}
-          <!-- {{ curr_line }} -->
         </li>
         <li class="song-section">
           <b>{{ curr_line.song }}</b> Line {{ curr_line.line.num }}
@@ -35,15 +34,11 @@ export default {
       curr_line: "getCurrentLine",
     }),
   },
-  mounted() {
-    console.log(this.curr_line);
-  },
   methods: {
     updateInput(input) {
       store.commit("UPDATE_INPUT", input.target.innerText);
     },
     pressEnter() {
-      console.log("working");
       this.$emit("pressEnter");
     },
   },

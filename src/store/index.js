@@ -68,7 +68,6 @@ export default new Vuex.Store({
     },
     getAlbum: (state) => (ind) => {
       const album_name = state.albumOrder[ind];
-      console.log(album_name, ind);
       return state.data[album_name];
     },
     getAlbumName: (state) => (ind) => {
@@ -130,11 +129,9 @@ export default new Vuex.Store({
       return state.similarities;
     },
     getSongs: (state) => {
-      console.log(state.songs);
       return state.songs;
     },
     getAlbums: (state) => {
-      console.log(state.albums);
       return state.albums;
     },
     getChartCols: (state) => {
@@ -196,11 +193,9 @@ export default new Vuex.Store({
 
       full_obj.line = r_line;
 
-      console.log(full_obj);
       Vue.set(state, "current_line", full_obj);
     },
     GET_LINE_FROM(state, section) {
-      console.log("starting");
       const full_obj = {};
       var random = Math.floor(Math.random() * state.albumOrder.length);
       const r_album = state.data[state.albumOrder[random]];
@@ -230,7 +225,6 @@ export default new Vuex.Store({
       full_obj.line = r_line;
 
       Vue.set(state, "current_line", full_obj);
-      console.log("ending", state.current_line);
     },
     GET_LINE_FROM_ALBUM(state, ind) {
       const full_obj = {};
@@ -248,12 +242,9 @@ export default new Vuex.Store({
 
       full_obj.line = r_line;
 
-      console.log(full_obj);
       Vue.set(state, "current_line", full_obj);
     },
     GET_FRIEND_LINE(state, q) {
-      // var full_obj = {};
-      console.log(state.quiz_seeds.seeds[state.mode - 1][[q - 1]], q);
       Vue.set(
         state,
         "current_line",
@@ -265,12 +256,10 @@ export default new Vuex.Store({
     },
     UPDATE_SIMILARITY(state, data) {
       state.similarities.push(data.curr_sim);
-      console.log("before", data.song);
       state.songs.push(data.song);
       state.albums.push(data.album);
     },
     PLAY_GAME(state, mode) {
-      console.log(router.currentRoute.name);
       state.mode = parseInt(mode);
       state.q_num++;
 
@@ -282,7 +271,6 @@ export default new Vuex.Store({
       switch (state.mode) {
         case 0:
           // Play with friends
-          console.log("FRIENDS");
           break;
         case 1: // Freeplay modes
           this.commit("GET_RANDOM_LINE");
@@ -297,7 +285,6 @@ export default new Vuex.Store({
           this.commit("GET_LINE_FROM", "Bridge");
           break;
         case 5: // Pre-Chorus mode
-          console.log("going");
           this.commit("GET_LINE_FROM", "Pre-Chorus");
           break;
         case 6: // Intro mode
@@ -351,8 +338,7 @@ export default new Vuex.Store({
         "https://raw.githubusercontent.com/MargauxThw/TS-lyrics/main/AllData.json"
       )
         .then((response) => response.json())
-        .then((data) => context.commit("SET_DATA", data))
-        .then(() => console.log("FETCH DONE"));
+        .then((data) => context.commit("SET_DATA", data));
     },
   },
   modules: {},
