@@ -14,7 +14,7 @@
       <p class="prev">{{ curr_line.line.prev }}</p>
       <p
         class="lyrics this-line"
-        contenteditable="true"
+        contenteditable
         @input="updateInput"
         @keyup.enter="pressEnter"
         @keydown.enter.prevent
@@ -32,11 +32,15 @@ export default {
   computed: {
     ...mapGetters({
       curr_line: "getCurrentLine",
+      q_num: "getQNum",
+      similarities: "getSimilarities",
     }),
   },
   methods: {
     updateInput(input) {
-      store.commit("UPDATE_INPUT", input.target.innerText);
+      if (this.q_num > this.similarities.length) {
+        store.commit("UPDATE_INPUT", input.target.innerText);
+      }
     },
     pressEnter() {
       this.$emit("pressEnter");
