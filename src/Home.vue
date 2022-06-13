@@ -16,8 +16,12 @@
       <button @click="startPress(1)" class="other">
         🤓 Freeplay - 13 lines 🤓
       </button>
-      <button @click="startPress(2)" class="other">🥳 Chorus Quiz 🥳</button>
-      <button @click="startPress(3)" class="other">😤 Verse Quiz 😤</button>
+      <button @click="startPress(2)" class="other">
+        🥳 Sing it in the chorus 🥳
+      </button>
+      <button @click="startPress(3)" class="other">
+        😤 Let it out in the verse 😤
+      </button>
       <button @click="startPress(4)" class="other">🏆 Bridgeageddon 🏆</button>
       <button @click="startPress(5)" class="other">
         😍 We love a pre-chorus 😍

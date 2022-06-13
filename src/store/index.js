@@ -45,8 +45,8 @@ export default new Vuex.Store({
     quizNames: [
       "Play with friends",
       "Freeplay - 13 lines",
-      "Chorus Quiz",
-      "Verse Quiz",
+      "Sing it in the chorus",
+      "Let it out in the verse",
       "Bridgeageddon",
       "We love a pre-chorus",
       "Sacred (new) beginnings",
