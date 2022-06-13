@@ -1,12 +1,14 @@
 <template>
   <div id="quiz" v-if="!end">
     <h2>Quiz: {{ title }}</h2>
-    <p>
-      Question: <b>{{ q_num }} / {{ q_bound }}</b>
-    </p>
-    <p>
-      Average Accuracy: <b>{{ avgSim }}%</b>
-    </p>
+    <div id="scores">
+      <p>
+        <b>Q{{ q_num }} / {{ q_bound }}</b>
+      </p>
+      <p>
+        Average: <b>{{ avgSim }}%</b>
+      </p>
+    </div>
     <song-card @pressEnter="checkPress" v-if="!checking" />
     <song-card @pressEnter="nextPress" v-else />
     <p v-if="checking">
@@ -151,31 +153,29 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 50px;
-}
-body {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 5% 5% 0% 5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-nav {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  min-height: 20px;
+// #app {
+//   font-family: Avenir, Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-align: center;
+//   color: #2c3e50;
+//   margin-top: 50px;
+// }
+// body {
+//   max-width: 900px;
+//   margin: 0 auto;
+//   padding: 5% 5% 0% 5%;
+//   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+//     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+// }
+#scores {
+  display: inline-flex;
+  justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid lightgrey;
-  h1 {
-    font-size: 1em;
-    margin-inline-start: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  p {
+    margin-block: 0;
   }
 }
 .button-menu {
