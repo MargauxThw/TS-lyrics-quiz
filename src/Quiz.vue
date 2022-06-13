@@ -6,7 +6,7 @@
         <b>Q{{ q_num }} / {{ q_bound }}</b>
       </p>
       <p>
-        Average: <b>{{ avgSim }}%</b>
+        Average accuracy: <b>{{ avgSim }}%</b>
       </p>
     </div>
     <song-card @pressEnter="checkPress" v-if="!checking" />
