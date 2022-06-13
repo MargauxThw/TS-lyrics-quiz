@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <nav>
-      <button @click="$route.name !== 'home' ? $router.push('/') : void 0">
-        <i class="fa fa-home fa-lg"></i>
-      </button>
-      <h1>Taylor Swift Lyrics Quiz</h1>
-      <button />
+      <h1
+        @click="$route.name !== 'home' ? $router.push('/') : void 0"
+        style="cursor: pointer"
+      >
+        Taylor Swift Lyrics Quiz
+      </h1>
     </nav>
     <router-view v-if="fetched" />
-    <!-- <bar-chart /> -->
   </div>
 </template>
 
@@ -45,7 +45,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 50px;
+  // margin-top: 50px;
 }
 body {
   max-width: 900px;
@@ -54,28 +54,32 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+// nav {
+//   top: 0px;
+//   left: auto;
+//   position: absolute;
+//   min-height: 20px;
+//   width: 90%;
+
+//   max-width: 900px;
+//   margin: 0 auto;
+
+//   h1 {
+//     font-size: 1em;
+//     margin-inline-start: 0;
+//   }
+// }
 nav {
   top: 0px;
-  left: auto;
+  left: 0px;
   position: absolute;
   min-height: 20px;
-  width: 90%;
-  // border-bottom: 2px solid black;
-  // border-bottom: none;
-
-  max-width: 900px;
-  margin: 0 auto;
-  // padding: 0 5%;
-
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
   h1 {
     font-size: 1em;
     margin-inline-start: 0;
   }
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 button {
   cursor: pointer;
