@@ -30,6 +30,11 @@ export default {
   created() {
     console.log(this.$route);
   },
+  watch: {
+    $route: function () {
+      window.goatcounter.count(window.location.pathname);
+    },
+  },
 };
 </script>
 
