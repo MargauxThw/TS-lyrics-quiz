@@ -46,6 +46,20 @@
       correct
     </h3>
     <bar-chart />
+    <button
+      class="nextButton filled"
+      @click="$router.go()"
+      style="margin-top: 50px"
+    >
+      PLAY AGAIN
+    </button>
+    <button
+      class="nextButton outline"
+      @click="$router.push('/')"
+      style="margin-top: 10px; margin-bottom: 50px"
+    >
+      RETURN HOME
+    </button>
   </div>
 </template>
 
@@ -210,28 +224,6 @@ export default {
 //   }
 // }
 
-#check {
-  background: #2196f3;
-  border: 2px solid #2196f3;
-}
-#check,
-#next {
-  display: inline-block;
-  width: 20%;
-  // max-width: 46px;
-  // min-width: 30px;
-  min-height: 46px;
-  max-height: 46px;
-  border-radius: 4px;
-  text-align: center;
-  font-size: 1em;
-  color: white;
-  margin-left: 4px;
-  padding: 0;
-  margin-top: 0%;
-  margin-bottom: 0%;
-}
-
 .checkButton,
 .nextButton {
   // box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -254,6 +246,17 @@ export default {
   width: 100%;
   max-width: 600px;
   box-shadow: none !important;
+}
+
+.outline {
+  border: 2px solid #2c3e50;
+  background: white;
+  color: #2c3e50;
+}
+.filled {
+  border: 2px solid #2c3e50;
+  background: #2c3e50;
+  color: white;
 }
 // .myButton {
 //   cursor: pointer;
