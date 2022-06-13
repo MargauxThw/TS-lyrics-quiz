@@ -11,6 +11,22 @@
     </div>
     <song-card @pressEnter="checkPress" v-if="!checking" />
     <song-card @pressEnter="nextPress" v-else />
+    <button
+      class="checkButton"
+      v-if="!checking"
+      @click="checkPress"
+      :class="$store.getters.getAlbumCol(curr_line.album_num)"
+    >
+      CHECK
+    </button>
+    <button
+      class="nextButton"
+      v-if="checking"
+      @click="nextPress"
+      :class="$store.getters.getAlbumCol(curr_line.album_num)"
+    >
+      NEXT LYRICS
+    </button>
     <p v-if="checking">
       Correct Lyrics: <b>{{ curr_line.line.this }}</b>
     </p>
@@ -20,9 +36,6 @@
     <p v-if="checking">
       Score: <b>{{ curr_sim }}% accurate</b>
     </p>
-
-    <button v-if="!checking" @click="checkPress">CHECK</button>
-    <button v-if="checking" @click="nextPress">NEXT LYRICS</button>
   </div>
   <div id="quiz" v-else>
     <h3>Congratulations! You just finished:</h3>
@@ -178,26 +191,99 @@ export default {
     margin-block: 0;
   }
 }
-.button-menu {
-  border-top: 2px solid black;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+// .button-menu {
+//   border-top: 2px solid black;
+//   padding: 20px 0;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 8px;
 
-  button {
-    margin: 0px auto;
-    max-width: 600px;
-    width: 100%;
-    padding: 12px;
+//   button {
+//     margin: 0px auto;
+//     max-width: 600px;
+//     width: 100%;
+//     padding: 12px;
 
-    font-size: 1em;
-    font-style: bold;
-    color: white;
-    background-color: black;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-  }
+//     font-size: 1em;
+//     font-style: bold;
+//     color: white;
+//     background-color: black;
+//     border-radius: 8px;
+//     border: none;
+//     outline: none;
+//   }
+// }
+
+#check {
+  background: #2196f3;
+  border: 2px solid #2196f3;
 }
+#check,
+#next {
+  display: inline-block;
+  width: 20%;
+  // max-width: 46px;
+  // min-width: 30px;
+  min-height: 46px;
+  max-height: 46px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  margin-left: 4px;
+  padding: 0;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.checkButton,
+.nextButton {
+  // box-shadow: inset 0px 1px 0px 0px #ffffff;
+  // background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+  // background-color: rgb(174, 30, 73) !important;
+  border-radius: 6px;
+  // border: 1px solid #2c3e50;
+  margin-top: -20px;
+  border: none;
+  // display: inline-block;
+  cursor: pointer;
+  // color: #2c3e50;
+  color: white;
+  // font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 24px;
+  // text-decoration: none;
+  // text-shadow: 0px 1px 0px #ffffff;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: none !important;
+}
+// .myButton {
+//   cursor: pointer;
+//   margin: 0px auto;
+//   max-width: 600px;
+//   width: 100%;
+//   padding: 12px;
+
+//   font-size: 1em;
+//   font-style: bold;
+//   color: black;
+//   border-color: black;
+//   background-color: #f9f9f9;
+//   border-radius: 8px;
+//   // border: none;
+//   outline: none;
+//   :focus {
+//     border: 1px solid black;
+//   }
+// }
+// .myButton:hover {
+//   background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+//   background-color: #e9e9e9;
+// }
+// .myButton:active {
+//   position: relative;
+//   top: 1px;
+// }
 </style>

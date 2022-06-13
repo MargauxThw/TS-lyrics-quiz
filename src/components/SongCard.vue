@@ -76,6 +76,10 @@ export default {
     .this-line {
       outline-color: $evermore-line;
     }
+    &.checkButton,
+    &.nextButton {
+      background: rgb(188, 0, 0);
+    }
   }
 
   .folklore {
@@ -86,6 +90,10 @@ export default {
     }
     .this-line {
       outline-color: $folklore-line;
+    }
+    &.checkButton,
+    &.nextButton {
+      background: rgb(50, 50, 50);
     }
   }
 
@@ -98,6 +106,10 @@ export default {
     .this-line {
       outline-color: $lover-line;
     }
+    &.checkButton,
+    &.nextButton {
+      background: rgb(92, 139, 196);
+    }
   }
 
   .reputation {
@@ -108,6 +120,10 @@ export default {
     }
     .this-line {
       outline-color: $reputation-line;
+    }
+    &.checkButton,
+    &.nextButton {
+      background: rgb(0, 0, 0);
     }
   }
 
@@ -120,6 +136,10 @@ export default {
     .this-line {
       outline-color: $nineteen-line;
     }
+    &.checkButton,
+    &.nextButton {
+      background: rgb(114, 106, 207);
+    }
   }
 
   .red {
@@ -130,6 +150,10 @@ export default {
     }
     .this-line {
       outline-color: $red-line;
+    }
+    &.checkButton,
+    &.nextButton {
+      background: rgb(174, 30, 73);
     }
   }
 
@@ -142,6 +166,10 @@ export default {
     .this-line {
       outline-color: $speak-line;
     }
+    &.checkButton,
+    &.nextButton {
+      background: rgb(115, 18, 112);
+    }
   }
 
   .fearless {
@@ -152,6 +180,10 @@ export default {
     }
     .this-line {
       outline-color: $fearless-line;
+    }
+    &.checkButton,
+    &.nextButton {
+      background: rgb(182, 123, 9);
     }
   }
 
@@ -164,6 +196,10 @@ export default {
     .this-line {
       outline-color: $debut-line;
     }
+    &.checkButton,
+    &.nextButton {
+      background: rgb(27, 96, 105);
+    }
   }
 
   .other {
@@ -174,6 +210,10 @@ export default {
     }
     .this-line {
       outline-color: $other-line;
+    }
+    &.checkButton,
+    &.nextButton {
+      background: rgb(0, 0, 0);
     }
   }
 }
