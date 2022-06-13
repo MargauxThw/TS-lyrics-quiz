@@ -99,7 +99,9 @@ body {
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .button-menu {
-  border-top: 2px solid lightgrey;
+  // border-top: 2px solid lightgrey;
+  border-width: 2px;
+  border-style: solid;
   border-image: linear-gradient(
       45deg,
       #f79533,
@@ -112,8 +114,7 @@ body {
       #6fba82
     )
     1;
-  border-radius: 7px; //doesn't work
-
+  border-image-slice: 1 0 1 0;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
