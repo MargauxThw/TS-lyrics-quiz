@@ -3,19 +3,20 @@ import VueRouter from "vue-router";
 import App from "./App";
 import Home from "./Home";
 import Quiz from "./Quiz";
+import Friends from "./Friends";
 import store from "./store";
 
 Vue.use(VueRouter);
 
 const routes = [
   { path: "/", name: "home", component: Home },
-  // { path: "/friends", name: "friends", component: FriendsMenu },
-  // {
-  //   path: "/friends/quiz/:mode",
-  //   name: "friends-quiz",
-  //   component: Quiz,
-  //   props: true,
-  // },
+  { path: "/friends", name: "friends", component: Friends },
+  {
+    path: "/friends/quiz/:mode",
+    name: "friends-quiz",
+    component: Quiz,
+    props: true,
+  },
   { path: "/quiz/:mode", name: "quiz", component: Quiz, props: true },
   { path: "*", component: Home },
 ];
@@ -31,3 +32,5 @@ store.dispatch("FETCH_DATA").then(
     render: (h) => h(App),
   }).$mount("#app")
 );
+
+export default router;

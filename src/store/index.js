@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import seeds from "@/assets/seeded.js";
+import router from "@/main";
 
 Vue.use(Vuex);
 
@@ -89,7 +90,11 @@ export default new Vuex.Store({
       return state.mode;
     },
     getTitle: (state) => {
-      return state.quizNames[state.mode];
+      if (router.currentRoute.name == "friends-quiz") {
+        return `Play with friends - Quiz ${state.mode}`;
+      } else {
+        return state.quizNames[state.mode];
+      }
     },
     getAvgSim: (state) => {
       if (state.similarities.length == 0) {
@@ -246,6 +251,15 @@ export default new Vuex.Store({
       console.log(full_obj);
       Vue.set(state, "current_line", full_obj);
     },
+    GET_FRIEND_LINE(state, q) {
+      // var full_obj = {};
+      console.log(state.quiz_seeds.seeds[state.mode - 1][[q - 1]], q);
+      Vue.set(
+        state,
+        "current_line",
+        state.quiz_seeds.seeds[state.mode - 1][[q - 1]]
+      );
+    },
     UPDATE_INPUT(state, input) {
       state.input = input;
     },
@@ -256,19 +270,16 @@ export default new Vuex.Store({
       state.albums.push(data.album);
     },
     PLAY_GAME(state, mode) {
-      state.mode = mode;
+      console.log(router.currentRoute.name);
+      state.mode = parseInt(mode);
       state.q_num++;
 
-      console.log(
-        "MODE:",
-        typeof mode,
-        mode,
-        state.mode,
-        state.fetched,
-        state.data
-      );
+      if (router.currentRoute.name === "friends-quiz") {
+        this.commit("GET_FRIEND_LINE", state.q_num);
+        return;
+      }
 
-      switch (mode) {
+      switch (state.mode) {
         case 0:
           // Play with friends
           console.log("FRIENDS");

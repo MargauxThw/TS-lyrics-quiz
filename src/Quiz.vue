@@ -71,7 +71,8 @@ export default {
     this.end = false;
     this.checking = false;
     store.commit("RESET_GAME");
-    store.commit("PLAY_GAME", parseInt(this.$route.params.mode));
+    console.log(this.$route.params);
+    store.commit("PLAY_GAME", this.$route.params.mode);
   },
   computed: {
     ...mapGetters({
@@ -88,11 +89,6 @@ export default {
     }),
   },
   methods: {
-    // startPress(mode) {
-    //   store.commit("RESET_GAME");
-    //   store.commit("PLAY_GAME", mode);
-    //   this.started = true;
-    // },
     checkPress() {
       this.checking = true;
       var similarity = this.similarity(this.input, this.curr_line.line.this);
@@ -114,7 +110,7 @@ export default {
       if (this.q_num == this.q_bound) {
         this.end = true;
       } else {
-        store.commit("PLAY_GAME", this.mode);
+        store.commit("PLAY_GAME", this.$route.params.mode);
         console.log(this.curr_line);
       }
     },

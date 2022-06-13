@@ -76,7 +76,11 @@ export default {
   },
   methods: {
     startPress(mode) {
-      this.$router.push({ name: "quiz", params: { mode: mode } });
+      if (mode == 0) {
+        this.$router.push({ name: "friends" });
+      } else {
+        this.$router.push({ name: "quiz", params: { mode: mode } });
+      }
     },
   },
 };
