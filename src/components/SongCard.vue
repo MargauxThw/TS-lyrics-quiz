@@ -66,6 +66,21 @@ export default {
 }
 
 #app {
+  .midnights {
+    background: $midnights-gradient;
+    box-shadow: $midnights-shadow 0px 6px 10px;
+    .results-sep {
+      background: $midnights-line;
+    }
+    .this-line {
+      outline-color: $midnights-line;
+    }
+    &.checkButton,
+    &.nextButton {
+      background: #020f3a;
+    }
+  }
+
   .evermore {
     background: $evermore-gradient;
     box-shadow: $evermore-shadow 0px 6px 10px;

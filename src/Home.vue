@@ -32,15 +32,16 @@
       <button @click="startPress(7)" class="other">
         📖 Endings we'd never change 📖
       </button>
-      <button @click="startPress(8)" class="evermore">evermore</button>
-      <button @click="startPress(9)" class="folklore">folklore</button>
-      <button @click="startPress(10)" class="lover">Lover</button>
-      <button @click="startPress(11)" class="reputation">Reputation</button>
-      <button @click="startPress(12)" class="nineteen">1989</button>
-      <button @click="startPress(13)" class="red">Red</button>
-      <button @click="startPress(14)" class="speak">Speak now</button>
-      <button @click="startPress(15)" class="fearless">Fearless</button>
-      <button @click="startPress(16)" class="debut">Debut</button>
+      <button @click="startPress(8)" class="midnights">Midnights</button>
+      <button @click="startPress(9)" class="evermore">evermore</button>
+      <button @click="startPress(10)" class="folklore">folklore</button>
+      <button @click="startPress(11)" class="lover">Lover</button>
+      <button @click="startPress(12)" class="reputation">Reputation</button>
+      <button @click="startPress(13)" class="nineteen">1989</button>
+      <button @click="startPress(14)" class="red">Red</button>
+      <button @click="startPress(15)" class="speak">Speak now</button>
+      <button @click="startPress(16)" class="fearless">Fearless</button>
+      <button @click="startPress(17)" class="debut">Debut</button>
     </div>
     <p>
       <b>Note:</b> All of these quizzes (except 'Play with friends') are

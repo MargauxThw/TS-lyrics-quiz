@@ -11,6 +11,7 @@ export default new Vuex.Store({
     fetched: false,
     quiz_seeds: seeds,
     albumOrder: [
+      "midnights",
       "evermore",
       "folklore",
       "Lover",
@@ -23,6 +24,7 @@ export default new Vuex.Store({
       "Unspecified Album",
     ],
     albumCols: [
+      "midnights",
       "evermore",
       "folklore",
       "lover",
@@ -51,6 +53,7 @@ export default new Vuex.Store({
       "We love a pre-chorus",
       "Sacred (new) beginnings",
       "Endings we'd never change",
+      "Midnights",
       "evermore",
       "folklore",
       "Lover",
@@ -136,6 +139,7 @@ export default new Vuex.Store({
     },
     getChartCols: (state) => {
       const outlines = [
+        "rgb(2, 15, 58)",
         "rgb(254, 140, 0)",
         "rgb(135, 135, 135)",
         "rgb(255, 168, 255)",
@@ -148,6 +152,7 @@ export default new Vuex.Store({
         "rgb(0, 0, 0)",
       ];
       const insides = [
+        "rgba(2, 15, 58, 0.5)",
         "rgba(254, 140, 0, 0.5)",
         "rgba(135, 135, 135, 0.5)",
         "rgba(255, 168, 255, 0.5)",
@@ -320,6 +325,9 @@ export default new Vuex.Store({
         case 16: // Debut
           this.commit("GET_LINE_FROM_ALBUM", 8);
           break;
+        case 17: // Midnights
+          this.commit("GET_LINE_FROM_ALBUM", 9);
+          break;
       }
     },
     RESET_GAME(state) {
@@ -335,7 +343,7 @@ export default new Vuex.Store({
   actions: {
     FETCH_DATA(context) {
       fetch(
-        "https://raw.githubusercontent.com/MargauxThw/TS-lyrics/main/AllData.json"
+        "https://raw.githubusercontent.com/MargauxThw/TS-lyrics/main/AllDataMar2123.json"
       )
         .then((response) => response.json())
         .then((data) => context.commit("SET_DATA", data));
