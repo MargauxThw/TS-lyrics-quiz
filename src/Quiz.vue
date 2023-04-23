@@ -44,11 +44,22 @@
       You had an average of {{ avgSim }}% with {{ numCorrect }} line(s) 100%
       correct
     </h3>
-    <bar-chart />
+    <bar-chart style="margin-bottom: 16px" />
+    <a id="showResp" @click="triggerShowResp">{{
+      !showingResp ? "Show your responses" : "Hide your responses"
+    }}</a>
+    <div v-if="showingResp">
+      <song-answer-card
+        v-for="(answer, index) in answers"
+        :curr_line="answer"
+        :num="index + 1"
+        :key="index"
+      />
+    </div>
     <button
       class="nextButton filled"
       @click="$router.go()"
-      style="margin-top: 50px"
+      style="margin-top: 20px"
     >
       PLAY AGAIN
     </button>
@@ -67,22 +78,26 @@ import { mapGetters } from "vuex";
 import SongCard from "./components/SongCard.vue";
 import BarChart from "./components/BarChart.vue";
 import store from "./store";
+import SongAnswerCard from "./components/SongAnswerCard.vue";
 
 export default {
   name: "QuizPage",
   components: {
     SongCard,
     BarChart,
+    SongAnswerCard,
   },
   data() {
     return {
       end: false,
       checking: false,
+      showingResp: false,
     };
   },
   created() {
     this.end = false;
     this.checking = false;
+    this.showingResp = false;
     store.commit("RESET_GAME");
     store.commit("PLAY_GAME", this.$route.params.mode);
   },
@@ -97,9 +112,15 @@ export default {
       q_bound: "getQBound",
       avgSim: "getAvgSim",
       numCorrect: "getNumCorrect",
+      data: "getData",
+      answers: "getAnswers",
     }),
   },
   methods: {
+    triggerShowResp() {
+      console.log(this.showingResp, this.data);
+      this.showingResp = !this.showingResp;
+    },
     checkPress() {
       this.checking = true;
       var similarity = this.similarity(this.input, this.curr_line.line.this);
@@ -113,6 +134,12 @@ export default {
     },
     nextPress() {
       this.checking = false;
+      store.commit("ADD_ANSWER", {
+        question: this.curr_line,
+        sim: this.curr_sim,
+        input: this.input,
+      });
+
       store.commit("UPDATE_INPUT", "");
       document.getElementsByClassName("this-line")[0].innerHTML = "";
 
@@ -170,6 +197,13 @@ export default {
 </script>
 
 <style lang="scss">
+#showResp {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #2c3e50;
+  display: block;
+}
+
 #scores {
   display: inline-flex;
   justify-content: space-between;
@@ -184,7 +218,6 @@ export default {
 .checkButton,
 .nextButton {
   border-radius: 6px;
-  margin-top: -20px;
   border: none;
   cursor: pointer;
   color: white;
@@ -201,6 +234,7 @@ export default {
   background: white;
   color: #2c3e50;
 }
+
 .filled {
   border: 2px solid #2c3e50;
   background: #2c3e50;

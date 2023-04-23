@@ -8,6 +8,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     data: {},
+    answers: [],
     fetched: false,
     quiz_seeds: seeds,
     albumOrder: [
@@ -174,8 +175,15 @@ export default new Vuex.Store({
 
       return { outlines: ordered_outlines, insides: ordered_insides };
     },
+    getAnswers: (state) => {
+      return state.answers;
+    },
   },
   mutations: {
+    ADD_ANSWER(state, answer) {
+      state.answers.push(answer);
+      console.log(state.answers);
+    },
     SET_DATA(state, data) {
       for (var i = 0; i < state.albumOrder.length; i++) {
         Vue.set(state.data, state.albumOrder[i], data[state.albumOrder[i]]);
@@ -338,6 +346,7 @@ export default new Vuex.Store({
       state.input = "";
       state.mode = 0;
       state.q_num = 0;
+      state.answers = [];
     },
   },
   actions: {
