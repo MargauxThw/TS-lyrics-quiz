@@ -182,7 +182,6 @@ export default new Vuex.Store({
   mutations: {
     ADD_ANSWER(state, answer) {
       state.answers.push(answer);
-      console.log(state.answers);
     },
     SET_DATA(state, data) {
       for (var i = 0; i < state.albumOrder.length; i++) {

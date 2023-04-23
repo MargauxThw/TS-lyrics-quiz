@@ -58,14 +58,32 @@
     </div>
     <button
       class="nextButton filled"
-      @click="$router.go()"
+      @click="
+        () => {
+          window.goatcounter.count({
+            path: `Play again: ${this.title}`,
+            title: 'Navigation',
+            event: true,
+          });
+          $router.go();
+        }
+      "
       style="margin-top: 20px"
     >
       PLAY AGAIN
     </button>
     <button
       class="nextButton outline"
-      @click="$router.push('/')"
+      @click="
+        () => {
+          window.goatcounter.count({
+            path: `Home button after: ${this.title}`,
+            title: 'Navigation',
+            event: true,
+          });
+          $router.push('/');
+        }
+      "
       style="margin-top: 10px; margin-bottom: 50px"
     >
       RETURN HOME
@@ -118,8 +136,14 @@ export default {
   },
   methods: {
     triggerShowResp() {
-      console.log(this.showingResp, this.data);
       this.showingResp = !this.showingResp;
+      if (this.showResp == true) {
+        window.goatcounter.count({
+          path: "Show Responses",
+          title: "action",
+          event: true,
+        });
+      }
     },
     checkPress() {
       this.checking = true;
@@ -145,8 +169,18 @@ export default {
 
       if (this.q_num == this.q_bound) {
         this.end = true;
+        window.goatcounter.count({
+          path: `Finished a quiz: ${this.title}`,
+          title: "Finished a quiz",
+          event: true,
+        });
       } else {
         store.commit("PLAY_GAME", this.$route.params.mode);
+        window.goatcounter.count({
+          path: `Finished a question: ${this.title}`,
+          title: "Finished a question",
+          event: true,
+        });
       }
     },
     editDistance(s1, s2) {

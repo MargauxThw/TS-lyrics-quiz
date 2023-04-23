@@ -2,7 +2,11 @@
   <div id="app">
     <nav>
       <h1
-        @click="$route.name !== 'home' ? $router.push('/') : void 0"
+        @click="
+          () => {
+            $route.name !== 'home' ? navigate() : void 0;
+          }
+        "
         style="cursor: pointer"
       >
         Taylor Swift Lyrics Quiz
@@ -25,6 +29,16 @@ export default {
   watch: {
     $route: function () {
       window.goatcounter.count(window.location.pathname);
+    },
+  },
+  methods: {
+    navigate() {
+      window.goatcounter.count({
+        path: `Home via nav from: ${this.$route.name}`,
+        title: "Navigation",
+        event: true,
+      });
+      this.$router.push("/");
     },
   },
 };
