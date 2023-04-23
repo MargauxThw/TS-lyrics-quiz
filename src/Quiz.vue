@@ -155,6 +155,11 @@ export default {
         song: song,
         album: album,
       });
+      window.goatcounter.count({
+        path: `Finished a question: ${this.title}`,
+        title: "Finished a question",
+        event: true,
+      });
     },
     nextPress() {
       this.checking = false;
@@ -176,11 +181,6 @@ export default {
         });
       } else {
         store.commit("PLAY_GAME", this.$route.params.mode);
-        window.goatcounter.count({
-          path: `Finished a question: ${this.title}`,
-          title: "Finished a question",
-          event: true,
-        });
       }
     },
     editDistance(s1, s2) {
