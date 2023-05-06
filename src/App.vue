@@ -18,6 +18,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+// import store from "./store";
 
 export default {
   name: "App",
@@ -29,6 +30,7 @@ export default {
   watch: {
     $route: function () {
       window.goatcounter.count(window.location.pathname);
+      // store.commit("RESET_BOUND");
     },
   },
   methods: {

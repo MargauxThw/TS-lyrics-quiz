@@ -57,12 +57,34 @@
       />
     </div>
     <button
+      v-if="q_bound !== 5"
       class="nextButton filled"
       @click="playAgain()"
       style="margin-top: 20px"
     >
       PLAY AGAIN
     </button>
+    <button
+      v-else
+      class="nextButton filled"
+      @click="triggerShowModal()"
+      style="margin-top: 20px"
+    >
+      SEE DAILY QUIZ HISTORY
+    </button>
+    <div v-if="showingModal" id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" @click="triggerShowModal()">&times;</span>
+        <h3 style="margin-top: 10px">DAILY QUIZ HISTORY</h3>
+        <div id="stats">
+          <p><strong>Played:</strong><br />{{ played }}</p>
+          <p><strong>Longest streak:</strong><br />{{ longestStreak }}</p>
+          <p><strong>Current streak:</strong><br />{{ currStreak }}</p>
+        </div>
+        <daily-chart style="margin-bottom: 16px" />
+      </div>
+    </div>
     <button
       class="nextButton outline"
       @click="home()"
@@ -77,6 +99,7 @@
 import { mapGetters } from "vuex";
 import SongCard from "./components/SongCard.vue";
 import BarChart from "./components/BarChart.vue";
+import DailyChart from "./components/DailyChart.vue";
 import store from "./store";
 import SongAnswerCard from "./components/SongAnswerCard.vue";
 
@@ -85,6 +108,7 @@ export default {
   components: {
     SongCard,
     BarChart,
+    DailyChart,
     SongAnswerCard,
   },
   data() {
@@ -92,14 +116,29 @@ export default {
       end: false,
       checking: false,
       showingResp: false,
+      showingModal: false,
+      played: 1,
+      currStreak: 1,
+      longestStreak: 1,
     };
   },
   created() {
     this.end = false;
     this.checking = false;
     this.showingResp = false;
+    this.showingModal = false;
     store.commit("RESET_GAME");
-    store.commit("PLAY_GAME", this.$route.params.mode);
+    if (
+      this.$router.currentRoute.name == "daily-quiz" &&
+      localStorage.getItem(`daily_${store.getters.getDailyNum}`) !== null
+    ) {
+      store.commit("TRIGGER_ALREADY_PLAYED");
+      this.end = true;
+    }
+    store.commit(
+      "PLAY_GAME",
+      this.$route.params.mode ? this.$route.params.mode : -1
+    );
   },
   computed: {
     ...mapGetters({
@@ -126,6 +165,19 @@ export default {
           event: true,
         });
       }
+    },
+    triggerShowModal() {
+      this.showingModal = !this.showingModal;
+      if (this.showingModal == true) {
+        window.goatcounter.count({
+          path: "Show Modal",
+          title: "action",
+          event: true,
+        });
+      }
+      this.played = store.getters.getNumPlayed;
+      this.currStreak = store.getters.getCurrStreak;
+      this.longestStreak = store.getters.getLongestStreak;
     },
     home() {
       window.goatcounter.count({
@@ -177,6 +229,9 @@ export default {
           title: "Finished a quiz",
           event: true,
         });
+        if (this.q_bound == 5) {
+          store.dispatch("UPDATE_DAILY_DATA");
+        }
       } else {
         store.commit("PLAY_GAME", this.$route.params.mode);
       }
@@ -245,6 +300,55 @@ export default {
   p {
     margin-block: 0;
   }
+}
+
+/* The Modal (background) */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+  max-width: 600px;
+  #stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: no-wrap;
+    p {
+      width: 100%;
+    }
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .checkButton,

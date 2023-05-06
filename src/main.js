@@ -17,9 +17,15 @@ const routes = [
     component: Quiz,
     props: true,
   },
+  {
+    path: "/daily-quiz",
+    name: "daily-quiz",
+    component: Quiz,
+  },
   { path: "/quiz/:mode", name: "quiz", component: Quiz, props: true },
   { path: "*", component: Home },
 ];
+
 const router = new VueRouter({
   mode: "history",
   routes,

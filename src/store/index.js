@@ -5,9 +5,32 @@ import router from "@/main";
 
 Vue.use(Vuex);
 
+function datediff(first, second) {
+  return Math.round((second - first) / (1000 * 60 * 60 * 24));
+}
+
+function parseDate(str) {
+  var mdy = str.split("/");
+  return new Date(mdy[2], mdy[0] - 1, mdy[1]);
+}
+
+function getDiff() {
+  return datediff(
+    parseDate("5/5/2023"),
+    parseDate(
+      new Date()
+        .toLocaleString("en-US", {
+          timeZone: "America/New_York",
+        })
+        .split(", ")[0]
+    )
+  );
+}
+
 export default new Vuex.Store({
   state: {
     data: {},
+    daily_data: {},
     answers: [],
     fetched: false,
     quiz_seeds: seeds,
@@ -93,8 +116,14 @@ export default new Vuex.Store({
       return state.mode;
     },
     getTitle: (state) => {
+      let dailyNum = getDiff();
       if (router.currentRoute.name == "friends-quiz") {
         return `Play with friends - Quiz ${state.mode}`;
+      } else if (
+        router.currentRoute.name == "daily-quiz" &&
+        state.q_bound == 5
+      ) {
+        return `Daily Quiz #${dailyNum}`;
       } else {
         return state.quizNames[state.mode];
       }
@@ -178,6 +207,66 @@ export default new Vuex.Store({
     getAnswers: (state) => {
       return state.answers;
     },
+    getDailyNum: () => {
+      return getDiff();
+    },
+    getDailyData: () => {
+      let keys = Object.keys(localStorage);
+      let scores = [];
+      let chartData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+      for (let i = 0; i < keys.length; i++) {
+        if (keys[i].startsWith("daily_")) {
+          scores.push(JSON.parse(localStorage.getItem(keys[i])).avgSim);
+        }
+      }
+
+      for (let i = 0; i < scores.length; i++) {
+        chartData[Math.floor(scores[i] / 10)] += 1;
+      }
+
+      return chartData;
+    },
+    getNumPlayed: () => {
+      return Object.keys(localStorage).map((k) => k.startsWith("daily_"))
+        .length;
+    },
+    getCurrStreak: () => {
+      let today = getDiff();
+
+      let chunks = [];
+      let prev = undefined;
+
+      Object.keys(localStorage)
+        .filter((k) => k.startsWith("daily_"))
+        .map((n) => Number.parseInt(n.split("_")[1]))
+        .sort()
+        .forEach((current) => {
+          if (prev === undefined || current - prev != 1) chunks.push([]);
+          chunks[chunks.length - 1].push(current);
+          prev = current;
+        });
+
+      return chunks.filter((c) => c.includes(today))[0].length;
+    },
+    getLongestStreak: () => {
+      let chunks = [];
+      let prev = undefined;
+
+      Object.keys(localStorage)
+        .filter((k) => k.startsWith("daily_"))
+        .map((n) => Number.parseInt(n.split("_")[1]))
+        .sort()
+        .forEach((current) => {
+          if (prev === undefined || current - prev != 1) chunks.push([]);
+          chunks[chunks.length - 1].push(current);
+          prev = current;
+        });
+
+      chunks.sort((a, b) => b.length - a.length);
+
+      return chunks[0].length;
+    },
   },
   mutations: {
     ADD_ANSWER(state, answer) {
@@ -186,6 +275,9 @@ export default new Vuex.Store({
     SET_DATA(state, data) {
       for (var i = 0; i < state.albumOrder.length; i++) {
         Vue.set(state.data, state.albumOrder[i], data[state.albumOrder[i]]);
+      }
+      if (localStorage) {
+        Vue.set(state.data, "daily_data", localStorage);
       }
       state.fetched = true;
     },
@@ -263,6 +355,25 @@ export default new Vuex.Store({
         state.quiz_seeds.seeds[state.mode - 1][[q - 1]]
       );
     },
+    GET_DAILY_LINE(state, seed) {
+      let r = new Math.seedrandom(seed).quick();
+      const full_obj = {};
+      var random = Math.floor(r * state.albumOrder.length);
+      const r_album = state.data[state.albumOrder[random]];
+      full_obj.album = state.albumOrder[random];
+      full_obj.album_num = random;
+
+      random = Math.floor(r * Object.keys(r_album).length);
+      const r_song = r_album[Object.keys(r_album)[random]];
+      full_obj.song = Object.keys(r_album)[random];
+
+      random = Math.floor(r * Object.keys(r_song).length);
+      const r_line = r_song[Object.keys(r_song)[random]];
+
+      full_obj.line = r_line;
+
+      Vue.set(state, "current_line", full_obj);
+    },
     UPDATE_INPUT(state, input) {
       state.input = input;
     },
@@ -277,6 +388,21 @@ export default new Vuex.Store({
 
       if (router.currentRoute.name === "friends-quiz") {
         this.commit("GET_FRIEND_LINE", state.q_num);
+        return;
+      }
+
+      if (router.currentRoute.name === "daily-quiz") {
+        state.q_bound = 5;
+        let seed = new Date()
+          .toLocaleString("en-US", {
+            timeZone: "America/New_York",
+          })
+          .split(", ")[0]
+          .split("/")
+          .join("");
+
+        seed += state.q_num;
+        this.commit("GET_DAILY_LINE", seed);
         return;
       }
 
@@ -346,6 +472,15 @@ export default new Vuex.Store({
       state.mode = 0;
       state.q_num = 0;
       state.answers = [];
+      state.q_bound = 13;
+    },
+    TRIGGER_ALREADY_PLAYED(state) {
+      let result = JSON.parse(localStorage.getItem(`daily_${getDiff()}`));
+
+      state.similarities = [...result.similarities];
+      state.songs = [...result.songs];
+      state.albums = [...result.albums];
+      state.answers = [...result.answers];
     },
   },
   actions: {
@@ -355,6 +490,25 @@ export default new Vuex.Store({
       )
         .then((response) => response.json())
         .then((data) => context.commit("SET_DATA", data));
+    },
+    UPDATE_DAILY_DATA({ state, getters }) {
+      if (localStorage.getItem(`daily_${getDiff()}`) !== null) {
+        return;
+      }
+
+      let result = {
+        num: getDiff(),
+        avgSim: getters.getAvgSim,
+        num_corr: getters.getNumCorrect,
+        similarities: [...state.similarities],
+        songs: [...state.songs],
+        albums: [...state.albums],
+        answers: [...state.answers],
+      };
+
+      localStorage.setItem(`daily_${getDiff()}`, JSON.stringify(result));
+
+      state.daily_data = localStorage;
     },
   },
   modules: {},

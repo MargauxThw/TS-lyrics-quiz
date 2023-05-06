@@ -9,6 +9,13 @@
       <b>Disclaimer:</b> These are probably the toughest Taylor Swift lyrics
       quizzes that you will find on the internet, proceed with caution...
     </p>
+    <div class="button-menu" style="border-bottom: none">
+      <button
+        @click="startPress(`daily`)"
+        class="daily"
+        v-text="`Daily Quiz (#${dailyNum}) - 5 lines`"
+      ></button>
+    </div>
     <div class="button-menu">
       <button @click="startPress(0)" class="other">
         💃💃 Play with friends 💃💃
@@ -65,6 +72,14 @@ export default {
   created() {
     this.checking = false;
     this.started = false;
+    this.dailyNum = this.getDiff();
+    this.auDate = new Date()
+      .toLocaleString("en-US", {
+        timeZone: "America/New_York",
+      })
+      .split(", ")[0]
+      .split("/")
+      .join("");
   },
   computed: {
     ...mapGetters({
@@ -83,9 +98,32 @@ export default {
     startPress(mode) {
       if (mode == 0) {
         this.$router.push({ name: "friends" });
+      } else if (mode[0] == "d") {
+        this.$router.push({
+          name: "daily-quiz",
+        });
       } else {
         this.$router.push({ name: "quiz", params: { mode: mode } });
       }
+    },
+    datediff(first, second) {
+      return Math.round((second - first) / (1000 * 60 * 60 * 24));
+    },
+    parseDate(str) {
+      var mdy = str.split("/");
+      return new Date(mdy[2], mdy[0] - 1, mdy[1]);
+    },
+    getDiff() {
+      return this.datediff(
+        this.parseDate("5/5/2023"),
+        this.parseDate(
+          new Date()
+            .toLocaleString("en-US", {
+              timeZone: "America/New_York",
+            })
+            .split(", ")[0]
+        )
+      );
     },
   },
 };
@@ -106,6 +144,20 @@ body {
   padding: 5% 5% 0% 5%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.daily {
+  // border-image: linear-gradient(
+  //     45deg,
+  //     #f79533,
+  //     #f37055,
+  //     #ef4e7b,
+  //     #a166ab,
+  //     #5073b8,
+  //     #1098ad,
+  //     #07b39b,
+  //     #6fba82
+  //   )
+  //   1;
 }
 .button-menu {
   border-width: 2px;
