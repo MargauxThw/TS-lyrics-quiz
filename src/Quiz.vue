@@ -58,32 +58,14 @@
     </div>
     <button
       class="nextButton filled"
-      @click="
-        () => {
-          window.goatcounter.count({
-            path: `Play again: ${this.title}`,
-            title: 'Navigation',
-            event: true,
-          });
-          $router.go();
-        }
-      "
+      @click="playAgain()"
       style="margin-top: 20px"
     >
       PLAY AGAIN
     </button>
     <button
       class="nextButton outline"
-      @click="
-        () => {
-          window.goatcounter.count({
-            path: `Home button after: ${this.title}`,
-            title: 'Navigation',
-            event: true,
-          });
-          $router.push('/');
-        }
-      "
+      @click="home()"
       style="margin-top: 10px; margin-bottom: 50px"
     >
       RETURN HOME
@@ -144,6 +126,22 @@ export default {
           event: true,
         });
       }
+    },
+    home() {
+      window.goatcounter.count({
+        path: `Home button after`,
+        title: "Navigation",
+        event: true,
+      });
+      this.$router.push("/");
+    },
+    playAgain() {
+      window.goatcounter.count({
+        path: `Play again`,
+        title: "Navigation",
+        event: true,
+      });
+      this.$router.go();
     },
     checkPress() {
       this.checking = true;
