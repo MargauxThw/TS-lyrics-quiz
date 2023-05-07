@@ -217,7 +217,11 @@ export default new Vuex.Store({
 
       for (let i = 0; i < keys.length; i++) {
         if (keys[i].startsWith("daily_")) {
-          scores.push(JSON.parse(localStorage.getItem(keys[i])).avgSim);
+          if (JSON.parse(localStorage.getItem(keys[i])).avgSim == 100) {
+            scores.push(99);
+          } else {
+            scores.push(JSON.parse(localStorage.getItem(keys[i])).avgSim);
+          }
         }
       }
 
