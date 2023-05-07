@@ -228,7 +228,7 @@ export default new Vuex.Store({
       return chartData;
     },
     getNumPlayed: () => {
-      return Object.keys(localStorage).map((k) => k.startsWith("daily_"))
+      return Object.keys(localStorage).filter((k) => k.startsWith("daily_"))
         .length;
     },
     getCurrStreak: () => {
