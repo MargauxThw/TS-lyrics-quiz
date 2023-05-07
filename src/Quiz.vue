@@ -197,7 +197,10 @@ export default {
     },
     checkPress() {
       this.checking = true;
-      var similarity = this.similarity(this.input, this.curr_line.line.this);
+      var similarity = this.similarity(
+        this.input.trim(),
+        this.curr_line.line.this
+      );
       var song = `${this.curr_line.song} ${this.curr_line.line.section}`;
       var album = this.curr_line.album_num;
       store.commit("UPDATE_SIMILARITY", {
