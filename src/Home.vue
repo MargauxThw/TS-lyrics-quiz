@@ -145,20 +145,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-.daily {
-  // border-image: linear-gradient(
-  //     45deg,
-  //     #f79533,
-  //     #f37055,
-  //     #ef4e7b,
-  //     #a166ab,
-  //     #5073b8,
-  //     #1098ad,
-  //     #07b39b,
-  //     #6fba82
-  //   )
-  //   1;
-}
 .button-menu {
   border-width: 2px;
   border-style: solid;
