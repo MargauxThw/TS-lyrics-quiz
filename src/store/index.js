@@ -405,7 +405,9 @@ export default new Vuex.Store({
           .split("/")
           .join("");
 
-        seed += state.q_num;
+        seed = seed * 13;
+        seed += state.q_num * state.q_num + state.q_num;
+
         this.commit("GET_DAILY_LINE", seed);
         return;
       }
