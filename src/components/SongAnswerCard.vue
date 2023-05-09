@@ -10,7 +10,8 @@
             {{ curr_line.question.album.toUpperCase() }}
           </li>
           <li class="song-section">
-            <b>{{ curr_line.question.song }}</b> Line {{ num }}
+            <b>{{ curr_line.question.song }}</b> Line
+            {{ curr_line.question.line.num }}
             {{ curr_line.question.line.section }}
           </li>
         </ul>
