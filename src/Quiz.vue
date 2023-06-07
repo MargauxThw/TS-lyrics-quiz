@@ -88,10 +88,27 @@
     <button
       class="nextButton outline"
       @click="home()"
-      style="margin-top: 10px; margin-bottom: 50px"
+      style="margin-top: 10px; margin-bottom: 25px"
     >
       RETURN HOME
     </button>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 12px 0 30px;
+        border-top: #aaa 1px solid;
+      "
+    >
+      <p>
+        <b>Enjoying this site?</b>
+      </p>
+      <a href="https://www.buymeacoffee.com/figmargaux"
+        ><img
+          src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee / Eras tix&emoji=&slug=figmargaux&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff"
+      /></a>
+    </div>
   </div>
 </template>
 
