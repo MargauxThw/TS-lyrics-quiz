@@ -67,7 +67,7 @@
       <p>
         <b>Enjoying this site?</b>
       </p>
-      <a href="https://www.buymeacoffee.com/figmargaux"
+      <a href="https://www.buymeacoffee.com/figmargaux" onclick="countBMC()"
         ><img
           src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee / Eras tix&emoji=&slug=figmargaux&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff"
       /></a>
@@ -113,6 +113,13 @@ export default {
     }),
   },
   methods: {
+    countBMC() {
+      window.goatcounter.count({
+        path: `Click BMC - Home`,
+        title: "Action",
+        event: true,
+      });
+    },
     startPress(mode) {
       if (mode == 0) {
         this.$router.push({ name: "friends" });
