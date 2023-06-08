@@ -67,7 +67,10 @@
       <p>
         <b>Enjoying this site?</b>
       </p>
-      <a href="https://www.buymeacoffee.com/figmargaux" onclick="countBMC()"
+      <a
+        href="https://www.buymeacoffee.com/figmargaux"
+        target="_blank"
+        @click="countBMC"
         ><img
           src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee / Eras tix&emoji=&slug=figmargaux&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff"
       /></a>
