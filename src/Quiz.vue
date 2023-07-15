@@ -95,10 +95,11 @@
     <div
       style="
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        margin: 12px 0 30px;
-        border-top: #aaa 1px solid;
+        justify-content: center;
+        gap: 12px;
+        margin: 12px 0 16px;
       "
     >
       <p>
@@ -108,9 +109,9 @@
         href="https://www.buymeacoffee.com/figmargaux"
         target="_blank"
         @click="countBMC"
-        ><img
-          src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee / Eras tix&emoji=&slug=figmargaux&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff"
-      /></a>
+        class="bmc"
+        >Buy me a coffee</a
+      >
     </div>
   </div>
 </template>
@@ -405,5 +406,18 @@ export default {
   border: 2px solid #2c3e50;
   background: #2c3e50;
   color: white;
+}
+
+.bmc {
+  background-color: #ffdd00;
+  padding: 4px 12px;
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+
+  :hover {
+    background-color: #ffe019;
+  }
 }
 </style>

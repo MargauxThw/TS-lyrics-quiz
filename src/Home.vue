@@ -59,8 +59,10 @@
     <div
       style="
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: center;
+        gap: 12px;
         margin: 12px 0 16px;
       "
     >
@@ -71,9 +73,9 @@
         href="https://www.buymeacoffee.com/figmargaux"
         target="_blank"
         @click="countBMC"
-        ><img
-          src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee / Eras tix&emoji=&slug=figmargaux&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff"
-      /></a>
+        class="bmc"
+        >Buy me a coffee</a
+      >
     </div>
   </div>
 </template>
@@ -214,47 +216,16 @@ body {
   }
 }
 
-.bmc-button > span {
-  font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+.bmc {
+  background-color: #ffdd00;
+  padding: 4px 12px;
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
-.bmc-button img {
-  width: 27px !important;
-  margin-bottom: 1px !important;
-  box-shadow: none !important;
-  order: none !important;
-  vertical-align: middle !important;
-}
-.bmc-button {
-  line-height: 36px !important;
-  height: 37px !important;
-  text-decoration: none !important;
-  display: inline-flex !important;
-  color: #333333 !important;
-  background-color: #ffdd00 !important;
-  border-radius: 3px !important;
-  border: 1px solid transparent !important;
-  padding: 1px 9px !important;
-  font-size: 18px !important;
-  letter-spacing: 0.6px !important;
-  box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
-  -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-  margin: 0 auto !important;
-  -webkit-box-sizing: border-box !important;
-  box-sizing: border-box !important;
-  -o-transition: 0.3s all linear !important;
-  -webkit-transition: 0.3s all linear !important;
-  -moz-transition: 0.3s all linear !important;
-  -ms-transition: 0.3s all linear !important;
-  transition: 0.3s all linear !important;
-}
-.bmc-button:hover,
-.bmc-button:active,
-.bmc-button:focus {
-  -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-  text-decoration: none !important;
-  box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-  opacity: 0.85 !important;
-  color: #555555 !important;
+
+.bmc:hover {
+  background-color: #ffe019;
 }
 </style>
