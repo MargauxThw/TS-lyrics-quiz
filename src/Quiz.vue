@@ -262,6 +262,21 @@ export default {
         });
         if (this.q_bound == 5) {
           store.dispatch("UPDATE_DAILY_DATA");
+          window.goatcounter.count({
+            path: `Current streak: ${this.currStreak}`,
+            title: "Daily data",
+            event: true,
+          });
+          window.goatcounter.count({
+            path: `Longest streak: ${this.longestStreak}`,
+            title: "Daily data",
+            event: true,
+          });
+          window.goatcounter.count({
+            path: `Amount played: ${this.played}`,
+            title: "Daily data",
+            event: true,
+          });
         }
       } else {
         store.commit("PLAY_GAME", this.$route.params.mode);
