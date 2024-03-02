@@ -7,9 +7,9 @@
       friends can play the same quiz and compare scores!
     </p>
     <p>
-      <b>Disclaimer:</b> For now, these quizzes were still randomly generated
-      from all Taylor Swift songs (not including Midnights) and sections - so if
-      there are any repeats or boring quizzes, apologies 😢
+      <b>Disclaimer:</b> These quizzes were originally generated from all lyrics
+      in all Taylor Swift songs (as of March 21, 2023 - so before the release of
+      Midnights) - if there are any repeats or boring quizzes, apologies 😢
     </p>
     <div class="button-menu">
       <button

@@ -40,9 +40,9 @@ export default new Vuex.Store({
       "folklore",
       "Lover",
       "Reputation",
-      "1989",
+      "1989 (Taylor's Version)",
       "Red (Taylor's Version)",
-      "Speak Now",
+      "Speak Now (Taylor's Version)",
       "Fearless (Taylor's Version)",
       "Taylor Swift",
       "Unspecified Album",
@@ -82,9 +82,9 @@ export default new Vuex.Store({
       "folklore",
       "Lover",
       "Reputation",
-      "1989",
+      "1989 (Taylor's Version)",
       "Red (Taylor's Version)",
-      "Speak Now",
+      "Speak Now (Taylor's Version)",
       "Fearless (Taylor's Version)",
       "Taylor Swift (Debut)",
     ],
@@ -492,7 +492,7 @@ export default new Vuex.Store({
   actions: {
     FETCH_DATA(context) {
       fetch(
-        "https://raw.githubusercontent.com/MargauxThw/TS-lyrics/main/AllDataMar2123.json"
+        "https://raw.githubusercontent.com/MargauxThw/TS-lyrics/main/AllDataOct2723.json"
       )
         .then((response) => response.json())
         .then((data) => context.commit("SET_DATA", data));

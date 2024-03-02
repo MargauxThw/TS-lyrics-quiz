@@ -15,6 +15,11 @@
         class="daily"
         v-text="`Daily Quiz (#${dailyNum}) - 5 lines`"
       ></button>
+      <!-- <button
+        @click="startPress(`eras`)"
+        class="eras"
+        v-text="`Test your Eras Tour setlist knowledge - 13 lines`"
+      ></button> -->
     </div>
     <div class="button-menu">
       <button @click="startPress(0)" class="other">
@@ -44,10 +49,18 @@
       <button @click="startPress(10)" class="folklore">folklore</button>
       <button @click="startPress(11)" class="lover">Lover</button>
       <button @click="startPress(12)" class="reputation">Reputation</button>
-      <button @click="startPress(13)" class="nineteen">1989</button>
-      <button @click="startPress(14)" class="red">Red</button>
-      <button @click="startPress(15)" class="speak">Speak now</button>
-      <button @click="startPress(16)" class="fearless">Fearless</button>
+      <button @click="startPress(13)" class="nineteen">
+        1989 (Taylor's Version)
+      </button>
+      <button @click="startPress(14)" class="red">
+        Red (Taylor's Version)
+      </button>
+      <button @click="startPress(15)" class="speak">
+        Speak now (Taylor's Version)
+      </button>
+      <button @click="startPress(16)" class="fearless">
+        Fearless (Taylor's Version)
+      </button>
       <button @click="startPress(17)" class="debut">Debut</button>
       <p>
         <b>Note:</b> All of these quizzes (except 'Play with friends' and the

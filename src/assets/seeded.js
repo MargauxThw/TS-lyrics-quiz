@@ -3,7 +3,7 @@ export default {
     [
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Invisible",
         line: {
           prev: "Let me want you",
@@ -15,7 +15,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "New Year's Day",
         line: {
           prev: "And I will hold on to you",
@@ -27,7 +27,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Wonderland",
         line: {
           prev: "And spinning out of control",
@@ -39,7 +39,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "I Wish You Would",
         line: {
           prev: "I wish you would",
@@ -51,7 +51,7 @@ export default {
       },
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Babe",
         line: {
           prev: "How could you do this, babe?",
@@ -63,7 +63,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "The Other Side Of The Door (Taylor's Version)",
         line: {
           prev: "I said, 'Leave,' but all I really want is you",
@@ -75,7 +75,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "mirrorball",
         line: {
           prev: "Shining just for you",
@@ -87,7 +87,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "cardigan",
         line: {
           prev: "Leavin' like a father",
@@ -99,7 +99,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Stay Beautiful",
         line: {
           prev: "And when you find everything you looked for",
@@ -111,7 +111,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "Getaway Car",
         line: {
           prev: "I was cryin' in a getaway car",
@@ -123,7 +123,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "Dress",
         line: {
           prev: "Say my name and everything just stops",
@@ -135,7 +135,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Come Back... Be Here (Taylor's Version)",
         line: {
           prev: "Spinning faster than the plane that took you",
@@ -147,7 +147,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "long story short",
         line: {
           prev: "Pushed from the precipice",
@@ -161,7 +161,7 @@ export default {
     [
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Tell Me Why (Taylor's Version)",
         line: {
           prev: "Here's to you and your temper",
@@ -173,7 +173,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Cold As You",
         line: {
           prev: "You put up walls and paint them all a shade of gray",
@@ -185,7 +185,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "august",
         line: {
           prev: "And I can see us twisted in bedsheets",
@@ -197,7 +197,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Forever & Always (Piano Version) (Taylor's Version)",
         line: {
           prev: "You didn't mean it baby, I don't think so",
@@ -209,7 +209,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Enchanted",
         line: {
           prev: "I wonder 'til I'm wide awake",
@@ -221,7 +221,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "illicit affairs",
         line: {
           prev: "Like you don't even exist",
@@ -233,7 +233,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Teardrops On My Guitar",
         line: {
           prev: "He's the reason for the teardrops on my guitar",
@@ -245,7 +245,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "The Man",
         line: {
           prev: "I'd be a fearless leader",
@@ -257,7 +257,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "All Too Well (Taylor's Version)",
         line: {
           prev: "There was nothing else I could do",
@@ -269,7 +269,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "marjorie",
         line: {
           prev: "You forget to be clever",
@@ -281,7 +281,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "it's time to go",
         line: {
           prev: "That will find you the right thing",
@@ -293,7 +293,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Mary's Song (Oh My My My)",
         line: {
           prev: "Take me back to the house in the backyard tree",
@@ -305,7 +305,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "I Wish You Would",
         line: {
           prev: "And remember what we were fighting for, and I",
@@ -319,7 +319,7 @@ export default {
     [
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Two Is Better Than One",
         line: {
           prev: "And maybe two is better than one",
@@ -331,7 +331,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Superstar (Taylor's Version)",
         line: {
           prev: "So dim that spotlight, tell me things like",
@@ -343,7 +343,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "This Is Why We Can't Have Nice Things",
         line: {
           prev: "(And here's to my real friends)",
@@ -355,7 +355,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "A Perfectly Good Heart",
         line: {
           prev: "Should've read the writing on the wall",
@@ -367,7 +367,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "The Lucky One (Taylor's Version)",
         line: {
           prev: "Yeah, they'll tell you now, you're the lucky one",
@@ -379,7 +379,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "State Of Grace (Acoustic Version) (Taylor's Version)",
         line: {
           prev: "You come around and the armor falls",
@@ -391,7 +391,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "'tis the damn season",
         line: {
           prev: "To leave the warmest bed I've ever known",
@@ -403,7 +403,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Welcome To New York",
         line: {
           prev: "Welcome to New York, welcome to New York",
@@ -415,7 +415,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "closure",
         line: {
           prev: "Closure, your closure",
@@ -427,7 +427,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "You're Not Sorry (Taylor's Version)",
         line: {
           prev: "You're not sorry",
@@ -439,7 +439,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "The Man",
         line: {
           prev: "So, it's okay that I'm mad",
@@ -451,7 +451,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Bad Blood",
         line: {
           prev: "You know it used to be mad love",
@@ -463,7 +463,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "I Know Places",
         line: {
           prev: "And you know for me, it's always you (I know places)",
@@ -477,7 +477,7 @@ export default {
     [
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "I Knew You Were Trouble (Taylor's Version)",
         line: {
           prev: "So shame on me now",
@@ -489,7 +489,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Never Grow Up",
         line: {
           prev: "I just realized everything I have is someday gonna be gone",
@@ -501,7 +501,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Tied Together With A Smile",
         line: {
           prev: "But you're coming undone",
@@ -513,7 +513,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Begin Again (Taylor's Version)",
         line: {
           prev: "I've been spending the last eight months",
@@ -525,7 +525,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "I Did Something Bad",
         line: {
           prev: "Now all he thinks about is me",
@@ -537,7 +537,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Invisible",
         line: {
           prev: "No matter what you do",
@@ -549,7 +549,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "'tis the damn season",
         line: {
           prev: "We could just ride around",
@@ -561,7 +561,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "Death By A Thousand Cuts",
         line: {
           prev: "Flashbacks waking me up",
@@ -573,7 +573,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "Dress",
         line: {
           prev: "My hands shake, I can't explain this",
@@ -585,7 +585,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Wonderland",
         line: {
           prev: "We found Wonderland",
@@ -597,7 +597,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "epiphany",
         line: {
           prev: "Only twenty minutes to sleep",
@@ -609,7 +609,7 @@ export default {
       },
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Two Is Better Than One",
         line: {
           prev: "But there's so much time to figure out the rest of my life",
@@ -621,7 +621,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "no body, no crime",
         line: {
           prev: "Good thing his mistress took out a big life insurance policy",
@@ -635,7 +635,7 @@ export default {
     [
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "If This Was A Movie",
         line: {
           prev: "Stand in the rain outside till I came out",
@@ -647,7 +647,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Innocent",
         line: {
           prev: "Oh, who you are is not where you've been",
@@ -659,7 +659,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "cardigan",
         line: {
           prev: "I knew you",
@@ -671,7 +671,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "New Year's Day",
         line: {
           prev: "Whose laugh I could recognize anywhere",
@@ -683,7 +683,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "right where you left me",
         line: {
           prev: "I can't bear witness",
@@ -695,7 +695,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Back To December",
         line: {
           prev: "I'd go back in time and change it, but I can't",
@@ -707,7 +707,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "The Outside",
         line: {
           prev: "I can still see you, this ain't the best view",
@@ -719,7 +719,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "invisible string",
         line: {
           prev: "All along there was some",
@@ -731,7 +731,7 @@ export default {
       },
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Two Is Better Than One",
         line: {
           prev: "But there's so much time to figure out the rest of my life",
@@ -743,7 +743,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Out Of The Woods",
         line: {
           prev: "Two paper airplanes flying, flying, flying",
@@ -755,7 +755,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "The Archer",
         line: {
           prev: "But who could stay?",
@@ -767,7 +767,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "We Are Never Ever Getting Back Together (Taylor's Version)",
         line: {
           prev: "With some indie record that's much cooler than mine",
@@ -779,7 +779,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "The Man",
         line: {
           prev: "Could all be separated from my good ideas and power moves",
@@ -793,7 +793,7 @@ export default {
     [
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Only The Young",
         line: {
           prev: "Wondering where the best hiding spot would be",
@@ -805,7 +805,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Mary's Song (Oh My My My)",
         line: {
           prev: "Take me back to the time we had our very first fight",
@@ -817,7 +817,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Forever Winter (Taylor's Version) [From the Vault]",
         line: {
           prev: "He says, 'Why fall in love, just so you can watch it go away?'",
@@ -829,7 +829,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Mine",
         line: {
           prev: "Do you remember all the city lights on the water?",
@@ -841,7 +841,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "This Is Why We Can't Have Nice Things",
         line: {
           prev: "Nice things, honey",
@@ -853,7 +853,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "seven",
         line: {
           prev: "Before I learned civility",
@@ -865,7 +865,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Jump Then Fall (Taylor's Version)",
         line: {
           prev: "Well, I like the way your hair falls in your face",
@@ -877,7 +877,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "All You Had To Do Was Stay",
         line: {
           prev: "But people like me are gone forever",
@@ -889,7 +889,7 @@ export default {
       },
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Both of Us",
         line: {
           prev: "Open up the fridge 'bout 20 times",
@@ -901,7 +901,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "All Too Well (Taylor's Version)",
         line: {
           prev: "'Cause I remember it all, all, all",
@@ -913,7 +913,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "right where you left me",
         line: {
           prev: "Cross-legged in the dim light",
@@ -925,7 +925,7 @@ export default {
       },
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Beautiful Ghosts",
         line: {
           prev: "But at least you have beautiful ghosts",
@@ -937,7 +937,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "long story short",
         line: {
           prev: "Pushed from the precipice",
@@ -951,7 +951,7 @@ export default {
     [
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "Dress",
         line: {
           prev: "Ah, ha, ha, ha-ah",
@@ -963,7 +963,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "invisible string",
         line: {
           prev: "She said I looked like an American singer",
@@ -975,7 +975,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "gold rush",
         line: {
           prev: "Gleaming, twinkling",
@@ -987,7 +987,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "the lakes",
         line: {
           prev: "And I want you right here",
@@ -999,7 +999,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Girl At Home (Taylor's Version)",
         line: {
           prev: "This, I have previously learned",
@@ -1011,7 +1011,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "the 1",
         line: {
           prev: "(Ooh)",
@@ -1023,7 +1023,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "I Know Places",
         line: {
           prev: "Baby, I know places we won't be found",
@@ -1035,7 +1035,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "A Perfectly Good Heart",
         line: {
           prev: "No matter what you say, I still can't believe",
@@ -1047,7 +1047,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Message In A Bottle (Taylor's Version) [From the Vault]",
         line: {
           prev: "These days I'm restless",
@@ -1059,7 +1059,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Stay Stay Stay (Taylor's Version)",
         line: {
           prev: "That's when you came in wearing a football helmet",
@@ -1071,7 +1071,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Back To December",
         line: {
           prev: "Probably mindless dreaming",
@@ -1083,7 +1083,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Mr. Perfectly Fine (Taylor's Version) [From The Vault]",
         line: {
           prev: "Hello, Mr. 'Perfectly fine'",
@@ -1095,7 +1095,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "It's Nice To Have A Friend",
         line: {
           prev: "Ooh",
@@ -1109,7 +1109,7 @@ export default {
     [
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Bye Bye Baby (Taylor's Version) [From The Vault]",
         line: {
           prev: "'Cause you took me home but you just couldn't keep me",
@@ -1121,7 +1121,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Cold As You",
         line: {
           prev: "Oh, what a shame, what a rainy ending given to a perfect day",
@@ -1133,7 +1133,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Should've Said No",
         line: {
           prev: "You should've gone home",
@@ -1145,7 +1145,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "End Game",
         line: {
           prev: "I wanna be your A-Team (A-Team)",
@@ -1157,7 +1157,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "Cruel Summer",
         line: {
           prev: "And I snuck in through the garden gate",
@@ -1169,7 +1169,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "King Of My Heart",
         line: {
           prev: "King of my heart, body, and soul, ooh whoa",
@@ -1181,7 +1181,7 @@ export default {
       },
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Renegade",
         line: {
           prev: "The shape of you was jagged and weak",
@@ -1193,7 +1193,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "betty",
         line: {
           prev: "I'm only seventeen, I don't know anything",
@@ -1205,7 +1205,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "epiphany",
         line: {
           prev: "Crawling up the beaches now",
@@ -1217,7 +1217,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "I Wish You Would",
         line: {
           prev: "I, I, I, I, I, I wish I, wish I",
@@ -1229,7 +1229,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "no body, no crime",
         line: {
           prev: "She thinks I did it, but she just can't prove it",
@@ -1241,7 +1241,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "We Were Happy (Taylor's Version) [From The Vault]",
         line: {
           prev: "Oh, I hate those voices telling me I'm not in love anymore",
@@ -1253,7 +1253,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Out Of The Woods",
         line: {
           prev: "It all seems so simple",
@@ -1267,7 +1267,7 @@ export default {
     [
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Bye Bye Baby (Taylor's Version) [From The Vault]",
         line: {
           prev: "Bye bye baby",
@@ -1279,7 +1279,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Superman",
         line: {
           prev: "I loved you from the very first day",
@@ -1291,7 +1291,7 @@ export default {
       },
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "I Don't Wanna Live Forever",
         line: {
           prev: "Now I'm in a cab, I tell 'em where your place is",
@@ -1303,7 +1303,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "Daylight",
         line: {
           prev: "I only see daylight, daylight, daylight, daylight",
@@ -1315,7 +1315,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "All Too Well (Taylor's Version)",
         line: {
           prev: "I'm a crumpled up piece of paper lying here",
@@ -1327,7 +1327,7 @@ export default {
       },
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Crazier",
         line: {
           prev: "Baby you showed me what living is for",
@@ -1339,7 +1339,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "You All Over Me (Taylor's Version) [From The Vault]",
         line: {
           prev: "I've still got you all over me",
@@ -1351,7 +1351,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "All You Had To Do Was Stay",
         line: {
           prev: "(Stay) Hey, all you had to do was stay",
@@ -1363,7 +1363,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "Don't Blame Me",
         line: {
           prev: "Something happened for the first time",
@@ -1375,7 +1375,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "peace",
         line: {
           prev: "Would it be enough if I could never give you peace?",
@@ -1387,7 +1387,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Love Story (Taylor's Version)",
         line: {
           prev: "And my daddy said, 'Stay away from Juliet'",
@@ -1399,7 +1399,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Should've Said No",
         line: {
           prev: "You shouldn't be begging for forgiveness at my feet",
@@ -1411,7 +1411,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "my tears ricochet",
         line: {
           prev: "We gather here, we line up, weepin' in a sunlit room",
@@ -1425,7 +1425,7 @@ export default {
     [
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Message In A Bottle (Taylor's Version) [From the Vault]",
         line: {
           prev: "I could be the reason you can't sleep at night (At night)",
@@ -1437,7 +1437,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "We Were Happy (Taylor's Version) [From The Vault]",
         line: {
           prev: "I do recall a good while back, we snuck into the circus",
@@ -1449,7 +1449,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Haunted",
         line: {
           prev: "Something's gone terribly wrong",
@@ -1461,7 +1461,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "long story short",
         line: {
           prev: "I wanna tell you not to get lost in these petty things",
@@ -1473,7 +1473,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Holy Ground (Taylor's Version)",
         line: {
           prev: "Was holy ground",
@@ -1485,7 +1485,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Clean",
         line: {
           prev: "Now that I'm clean, I'm never gonna risk it",
@@ -1497,7 +1497,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "You All Over Me (Taylor's Version) [From The Vault]",
         line: {
           prev: "Was the one that I met you",
@@ -1509,7 +1509,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Speak Now",
         line: {
           prev: "Ooh, ooh",
@@ -1521,7 +1521,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "False God",
         line: {
           prev: "Got the wine for you",
@@ -1533,7 +1533,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Welcome To New York",
         line: {
           prev: "So bright, they never blind me",
@@ -1545,7 +1545,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "epiphany",
         line: {
           prev: "'Doc, I think she's crashing out'",
@@ -1557,7 +1557,7 @@ export default {
       },
       {
         album: "Reputation",
-        album_num: 3,
+        album_num: 4,
         song: "Delicate",
         line: {
           prev: "Isn't it? Isn't it? Isn't it?",
@@ -1569,7 +1569,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "Cruel Summer",
         line: {
           prev: "It's a cruel summer",
@@ -1583,7 +1583,7 @@ export default {
     [
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Bad Blood",
         line: {
           prev: "'Cause baby, now we've got bad blood",
@@ -1595,7 +1595,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "The Moment I Knew (Taylor's Version)",
         line: {
           prev: "You called me later",
@@ -1607,7 +1607,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Superman",
         line: {
           prev: "Wishing the card was from you",
@@ -1619,7 +1619,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Stay Beautiful",
         line: {
           prev: "Ask anyone",
@@ -1631,7 +1631,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "my tears ricochet",
         line: {
           prev: "But what a ghostly scene",
@@ -1643,7 +1643,7 @@ export default {
       },
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Renegade",
         line: {
           prev: "I might've let them lay",
@@ -1655,7 +1655,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Don't You (Taylor's Version) [From The Vault]",
         line: {
           prev: "You don't know how much I feel I love you still",
@@ -1667,7 +1667,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Untouchable (Taylor's Version)",
         line: {
           prev: "You got to come on, come on, say that we'll be together",
@@ -1679,7 +1679,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Nothing New (Taylor's Version) [From the Vault]",
         line: {
           prev: "They tell you while you're young",
@@ -1691,7 +1691,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Starlight (Taylor's Version)",
         line: {
           prev: "Oh, my, what a marvelous tune",
@@ -1703,7 +1703,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "closure",
         line: {
           prev: "Some situation that needs to be handled",
@@ -1715,7 +1715,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "happiness",
         line: {
           prev: "Past the blood and bruise",
@@ -1727,7 +1727,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Bad Blood",
         line: {
           prev: "And I don't think we can solve 'em",
@@ -1741,7 +1741,7 @@ export default {
     [
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Should've Said No",
         line: {
           prev: "But do you honestly expect me to believe",
@@ -1753,7 +1753,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Superstar (Taylor's Version)",
         line: {
           prev: "I can't keep my eyes off of you",
@@ -1765,7 +1765,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Holy Ground (Taylor's Version)",
         line: {
           prev: "And the story's got dust on every page",
@@ -1777,7 +1777,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Mean",
         line: {
           prev: "And all you're ever gonna be is mean",
@@ -1789,7 +1789,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "I Think He Knows",
         line: {
           prev: "Lyrical smile, indigo eyes, hand on my thigh",
@@ -1801,7 +1801,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Mary's Song (Oh My My My)",
         line: {
           prev: "You said 'I do' and I did too",
@@ -1813,7 +1813,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "I Forgot That You Existed",
         line: {
           prev: "Would've been right there, front row",
@@ -1825,7 +1825,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "'tis the damn season",
         line: {
           prev: "We could just ride around",
@@ -1837,7 +1837,7 @@ export default {
       },
       {
         album: "Fearless (Taylor's Version)",
-        album_num: 7,
+        album_num: 8,
         song: "Hey Stephen (Taylor's Version)",
         line: {
           prev: "Why aren't you here tonight?",
@@ -1849,7 +1849,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "Soon You'll Get Better",
         line: {
           prev: "You'll get better",
@@ -1861,7 +1861,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Style",
         line: {
           prev: "And I got that red lip classic thing that you like",
@@ -1873,7 +1873,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Teardrops On My Guitar",
         line: {
           prev: "Drew talks to me",
@@ -1885,7 +1885,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "I Think He Knows",
         line: {
           prev: "I think he knows",
@@ -1899,7 +1899,7 @@ export default {
     [
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "exile",
         line: {
           prev: "And it took you five whole minutes",
@@ -1911,7 +1911,7 @@ export default {
       },
       {
         album: "1989",
-        album_num: 4,
+        album_num: 5,
         song: "Blank Space",
         line: {
           prev: "You look like my next mistake",
@@ -1923,7 +1923,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "happiness",
         line: {
           prev: "There is a glorious sunrise",
@@ -1935,7 +1935,7 @@ export default {
       },
       {
         album: "folklore",
-        album_num: 1,
+        album_num: 2,
         song: "invisible string",
         line: {
           prev: "When you were sixteen at the yogurt shop",
@@ -1947,7 +1947,7 @@ export default {
       },
       {
         album: "Taylor Swift",
-        album_num: 8,
+        album_num: 9,
         song: "Mary's Song (Oh My My My)",
         line: {
           prev: "Well, I was sixteen when suddenly",
@@ -1959,7 +1959,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "I Think He Knows",
         line: {
           prev: "I want you, bless my soul",
@@ -1971,7 +1971,7 @@ export default {
       },
       {
         album: "Lover",
-        album_num: 2,
+        album_num: 3,
         song: "I Forgot That You Existed",
         line: {
           prev: "I forgot that you existed",
@@ -1983,7 +1983,7 @@ export default {
       },
       {
         album: "Unspecified Album",
-        album_num: 9,
+        album_num: 10,
         song: "Only The Young",
         line: {
           prev: "Only the young (Only the young)",
@@ -1995,7 +1995,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "it's time to go",
         line: {
           prev: "",
@@ -2007,7 +2007,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "right where you left me",
         line: {
           prev: "I, I swear you could hear a hair pin drop",
@@ -2019,7 +2019,7 @@ export default {
       },
       {
         album: "Speak Now",
-        album_num: 6,
+        album_num: 7,
         song: "Haunted",
         line: {
           prev: "From everything we had",
@@ -2031,7 +2031,7 @@ export default {
       },
       {
         album: "Red (Taylor's Version)",
-        album_num: 5,
+        album_num: 6,
         song: "Nothing New (Taylor's Version) [From the Vault]",
         line: {
           prev: "How did I go from growing up to breaking down?",
@@ -2043,7 +2043,7 @@ export default {
       },
       {
         album: "evermore",
-        album_num: 0,
+        album_num: 1,
         song: "champagne problems",
         line: {
           prev: "Bustling crowds or silent sleepers",
