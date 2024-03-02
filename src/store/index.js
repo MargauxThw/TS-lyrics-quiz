@@ -64,7 +64,7 @@ export default new Vuex.Store({
     input: "",
     similarities: [],
     songs: [], // 'Cardigan [Verse]'
-    albums: [], // 0 => evermore
+    albums: [], // 0 => midnights
     mode: 0,
     q_num: 0,
     q_bound: 13,
@@ -124,6 +124,11 @@ export default new Vuex.Store({
         state.q_bound == 5
       ) {
         return `Daily Quiz #${dailyNum}`;
+      } else if (
+        router.currentRoute.name == "eras-quiz" &&
+        state.q_bound == 9
+      ) {
+        return `Eras tour`;
       } else {
         return state.quizNames[state.mode];
       }
@@ -378,6 +383,115 @@ export default new Vuex.Store({
 
       Vue.set(state, "current_line", full_obj);
     },
+    GET_ERAS_LINE(state, ind) {
+      var setlist = [
+        {
+          album: "Lover",
+          songs: [
+            "Miss Americana & The Heartbreak Prince",
+            "Cruel Summer",
+            "The Man",
+            "You Need To Calm Down",
+            "Lover",
+            "The Archer",
+          ],
+        },
+        {
+          album: "Fearless (Taylor's Version)",
+          songs: [
+            "Fearless (Taylor's Version)",
+            "You Belong With Me (Taylor's Version)",
+            "Love Story (Taylor's Version)",
+          ],
+        },
+        {
+          album: "evermore",
+          songs: [
+            "'tis the damn season",
+            "willow",
+            "marjorie",
+            "champagne problems",
+            "tolerate it",
+          ],
+        },
+        {
+          album: "Reputation",
+          songs: [
+            "...Ready For It?",
+            "Delicate",
+            "Don't Blame Me",
+            "Look What You Made Me Do",
+          ],
+        },
+        {
+          album: "Speak Now (Taylor's Version)",
+          songs: [
+            "Enchanted (Taylor's Version)",
+            "Long Live (Taylor's Version)",
+          ],
+        },
+        {
+          album: "Red (Taylor's Version)",
+          songs: [
+            "22 (Taylor's Version)",
+            "We Are Never Ever Getting Back Together (Taylor's Version)",
+            "I Knew You Were Trouble (Taylor's Version)",
+            "All Too Well (10 Minute Version) (Taylor's Version) [From the Vault]",
+          ],
+        },
+        {
+          album: "folklore",
+          songs: [
+            "seven",
+            "the 1",
+            "betty",
+            "the last great american dynasty",
+            "august",
+            "illicit affairs",
+            "my tears ricochet",
+            "cardigan",
+          ],
+        },
+        {
+          album: "1989 (Taylor's Version)",
+          songs: [
+            "Style (Taylor's Version)",
+            "Blank Space (Taylor's Version)",
+            "Shake It Off (Taylor's Version)",
+            "Wildest Dreams (Taylor's Version)",
+            "Bad Blood (Taylor's Version)",
+          ],
+        },
+        {
+          album: "midnights",
+          songs: [
+            "Lavender Haze",
+            "Anti‐Hero",
+            "Midnight Rain",
+            "Vigilante Shit",
+            "Bejeweled",
+            "Mastermind",
+            "Karma",
+          ],
+        },
+      ];
+      const full_obj = {};
+
+      const r_album = state.data[setlist[ind - 1].album];
+      full_obj.album = setlist[ind - 1].album;
+      full_obj.album_num = state.albumOrder.indexOf(setlist[ind - 1].album);
+
+      let random = Math.floor(Math.random() * setlist[ind - 1].songs.length);
+      const r_song = r_album[setlist[ind - 1].songs[random]];
+      full_obj.song = setlist[ind - 1].songs[random];
+
+      random = Math.floor(Math.random() * Object.keys(r_song).length);
+      const r_line = r_song[Object.keys(r_song)[random]];
+
+      full_obj.line = r_line;
+
+      Vue.set(state, "current_line", full_obj);
+    },
     UPDATE_INPUT(state, input) {
       state.input = input;
     },
@@ -409,6 +523,13 @@ export default new Vuex.Store({
         seed += state.q_num * state.q_num + state.q_num;
 
         this.commit("GET_DAILY_LINE", seed);
+        return;
+      }
+
+      if (router.currentRoute.name === "eras-quiz") {
+        state.q_bound = 9;
+        this.commit("GET_ERAS_LINE", state.q_num);
+
         return;
       }
 

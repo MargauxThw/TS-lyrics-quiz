@@ -15,11 +15,11 @@
         class="daily"
         v-text="`Daily Quiz (#${dailyNum}) - 5 lines`"
       ></button>
-      <!-- <button
+      <button
         @click="startPress(`eras`)"
         class="eras"
-        v-text="`Test your Eras Tour setlist knowledge - 13 lines`"
-      ></button> -->
+        v-text="`Eras Tour Setlist Quiz - 9 lines, 9 eras`"
+      ></button>
     </div>
     <div class="button-menu">
       <button @click="startPress(0)" class="other">
@@ -144,6 +144,10 @@ export default {
       } else if (mode[0] == "d") {
         this.$router.push({
           name: "daily-quiz",
+        });
+      } else if (mode[0] == "e") {
+        this.$router.push({
+          name: "eras-quiz",
         });
       } else {
         this.$router.push({ name: "quiz", params: { mode: mode } });

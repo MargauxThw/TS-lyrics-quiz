@@ -22,6 +22,11 @@ const routes = [
     name: "daily-quiz",
     component: Quiz,
   },
+  {
+    path: "/eras-quiz",
+    name: "eras-quiz",
+    component: Quiz,
+  },
   { path: "/quiz/:mode", name: "quiz", component: Quiz, props: true },
   { path: "*", component: Home },
 ];
