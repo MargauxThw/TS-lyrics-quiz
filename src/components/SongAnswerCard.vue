@@ -57,6 +57,21 @@ export default {
 }
 
 #app {
+  .ttpd {
+    background: $ttpd-gradient;
+    box-shadow: $ttpd-shadow 0px 6px 10px;
+    .results-sep {
+      background: $ttpd-line;
+    }
+    .this-line {
+      outline-color: $ttpd-line;
+    }
+    &.checkButton,
+    &.nextButton {
+      background: #241f1c;
+    }
+  }
+
   .midnights {
     background: $midnights-gradient;
     box-shadow: $midnights-shadow 0px 6px 10px;
