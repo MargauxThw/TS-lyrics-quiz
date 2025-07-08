@@ -283,8 +283,8 @@ export default {
       }
     },
     editDistance(s1, s2) {
-      s1 = s1.toLowerCase().replaceAll('"', "'");
-      s2 = s2.toLowerCase().replaceAll('"', "'");
+      s1 = s1.toLowerCase().replaceAll(/["“”‘’«»„‟‹›]/g, "'");
+      s2 = s2.toLowerCase().replaceAll(/["“”‘’«»„‟‹›]/g, "'");
 
       var costs = new Array();
       for (var i = 0; i <= s1.length; i++) {
