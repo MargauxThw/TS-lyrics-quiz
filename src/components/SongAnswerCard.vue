@@ -57,6 +57,21 @@ export default {
 }
 
 #app {
+  .tloasg {
+    background: $tloasg-gradient;
+    box-shadow: $tloasg-shadow 0px 6px 10px;
+    .results-sep {
+      background: $tloasg-line;
+    }
+    .this-line {
+      outline-color: $tloasg-line;
+    }
+    &.checkButton,
+    &.nextButton {
+      background: #03514d;
+    }
+  }
+
   .ttpd {
     background: $ttpd-gradient;
     box-shadow: $ttpd-shadow 0px 6px 10px;

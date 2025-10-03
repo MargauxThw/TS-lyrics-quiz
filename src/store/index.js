@@ -35,6 +35,7 @@ export default new Vuex.Store({
     fetched: false,
     quiz_seeds: seeds,
     albumOrder: [
+      "The Life of a Showgirl",
       "The Tortured Poets Department",
       "midnights",
       "evermore",
@@ -49,6 +50,7 @@ export default new Vuex.Store({
       "Unspecified Album",
     ],
     albumCols: [
+      "tloasg",
       "ttpd",
       "midnights",
       "evermore",
@@ -79,6 +81,7 @@ export default new Vuex.Store({
       "We love a pre-chorus",
       "Sacred (new) beginnings",
       "Endings we'd never change",
+      "The Life of a Showgirl",
       "The Tortured Poets Department",
       "Midnights",
       "evermore",
@@ -177,6 +180,7 @@ export default new Vuex.Store({
     },
     getChartCols: (state) => {
       const outlines = [
+        "rgb(121, 229, 172)",
         "rgb(36, 31, 28)",
         "rgb(2, 15, 58)",
         "rgb(254, 140, 0)",
@@ -191,6 +195,7 @@ export default new Vuex.Store({
         "rgb(0, 0, 0)",
       ];
       const insides = [
+        "rgba(121, 229, 172, 0.5)",
         "rgba(36, 31, 28, 0.5)",
         "rgba(2, 15, 58, 0.5)",
         "rgba(254, 140, 0, 0.5)",
@@ -223,7 +228,7 @@ export default new Vuex.Store({
     getDailyData: () => {
       let keys = Object.keys(localStorage);
       let scores = [];
-      let chartData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      let chartData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
       for (let i = 0; i < keys.length; i++) {
         if (keys[i].startsWith("daily_")) {
@@ -593,8 +598,11 @@ export default new Vuex.Store({
         case 17: // Midnights
           this.commit("GET_LINE_FROM_ALBUM", 9);
           break;
-        case 18: // Midnights
+        case 18: // TTPD
           this.commit("GET_LINE_FROM_ALBUM", 10);
+          break;
+        case 19: // TLOASG
+          this.commit("GET_LINE_FROM_ALBUM", 11);
           break;
       }
     },
@@ -621,7 +629,7 @@ export default new Vuex.Store({
   actions: {
     FETCH_DATA(context) {
       fetch(
-        "https://raw.githubusercontent.com/MargauxThw/TS-lyrics/main/AllDataApr1924.json"
+        "https://raw.githubusercontent.com/MargauxThw/TS-lyrics/main/AllDataOct325.json"
       )
         .then((response) => response.json())
         .then((data) => context.commit("SET_DATA", data));
